@@ -1,0 +1,9 @@
+
+Projects
+========
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+
+This page will contains project descriptions
