@@ -26,23 +26,23 @@ Python
 * Strings and string formatting
 * :doc:`Importing modules </PT/PT-importing_modules>`
 * Boolean expressions
-* The ``if`` statement
-* :doc:`Lists </PT/PT-lists>`
-
 
 
 Reminder: Weekly Summary
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-
+The weekly summary google form is due on Friday at midnight, and is available `**here** <https://forms.gle/ZGzYeG1m9czHu6dk9>`_
 
 Week 1 notebook
 ~~~~~~~~~~~~~~~
+
+- `View online <../_static/week02_in_class.html>`_
+- `Download  <../_static/week02_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
 
 
 Sample quiz 2
 ~~~~~~~~~~~~~
 
-
+- :download:`Sample Quiz 2 <../Sample_Quizzes/quiz2/quiz2_sample.pdf>`
 
 
