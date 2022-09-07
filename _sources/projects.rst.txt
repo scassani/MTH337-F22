@@ -6,4 +6,4 @@ Projects
    :titlesonly:
    :maxdepth: 2
 
-This page will contains project descriptions
+	Prime or not <Projects/prime_or_not/prime_or_not>
