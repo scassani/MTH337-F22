@@ -1,6 +1,100 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 2
+~~~~~~~
+
+- Will any of the quizzes be open note (being able to use our computers) or should we need to memorize all the codes?
+
+Probably not
+
+- Is there any situations like that we use if statement first, and then we use the for loop?
+
+Yes, we might see some depending on the applications
+
+- Will there be opportunity for extra credit in this course?
+
+little, close to the end of the semester.
+
+- The report introduction seems tough to write without rephrasing the problem statement's definition of prime numbers. Is this what you're looking for in the introduction?
+
+You shoudl not rephrase the website introduction. You should try to explain in you own words what the project is about and what is the goal of the project.
+
+- Will we ever be using the command "continue" within the context of this class because I'm not sure when would be best to use it
+
+It might happen. In my experience I use ``break`` more often than ``continue``, but they are both useful.
+
+- Will we be working on our projects in class, or is it mostly something to do on our own time?
+
+We will use some of class time to work on the projects, but you are expected to spend a good amount of time outside class as well.
+
+- Would we be able to practice more with Latex in class? 
+
+If you are curious about how to do some LaTeX synthax properly I'll be very happy to talk about it at office hours
+
+- As for the set up of our project submissions, can you assist us with formulating the proper verbiage you want with the actual code when we submit to you?
+
+If you send me something via email I can give you feedback.
+
+- When is the first project due?
+
+Check the class website.
+
+- I have question about how to use copy command in python.
+
+``copy`` makes a copy of the copied variable. We will see why this is important on week 3
+
+- I was wondering why a single quote mark doesn't designate a character type rather than just  another string? I know other languages make the distinction.
+
+That is how it works in python. I am honestly not familiar with the examples from other languages that you are mentioning.
+
+- Why did "venice" added twice after the code: myl2.append('venice') from line 24 week 2 note?
+
+Because I ran the cell twice in class. (this is a very good question)
+
+- Can ‘return' return anything, including things unrelated to 'def' function?
+
+Yes, absolutely.
+
+- Usually we round 4.45 to 4.6, but python rounds it to 4.4. Is it just how python works, or are there any other commands we should use? 
+
+It depends from the representation that python does of the number 4.45. It is very likely  stored as a number slightly small than 4.45, and that is why it is rounded down. This is a very interesting topic, and I will be happy to elaborate more on it at office hours
+
+- For the project, how much class time will be dedicated to working on it?
+
+Some of it. I do not have a specific time in mind
+
+- If you wanted to skip one instance of something, like 'f' in the suny buffalo example from class, so that you get suny bufalo instead of suny bualo, would you be able to do that? And how?
+
+You could. For example you could have a variable ``tmp`` that becomes ``False`` after you skip ``f`` once. So once you are trying to skip the ``ff`` you would check if ``tmp`` is ``True`` or not, and skip only if ``True``
+
+- Is it necessary to add parentheses to the things after `if`?
+
+You not not need to add parenthesis for the boolean expression, but it is a good idea to do it to keep the code clean and avoid mistakes.
+
+- In what order would loops execute if they were within each other? Does the loop inside another loop execute first, or vice versa?
+
+The outer loop will start, then it will runn the inner-most loop for each instance of the outer-loop. Try to run nested loops, where the outer one loops on ``[1,2,3]`` and the inner-most loops on ``['a','b']``. Put a print expression inside the inner-most loop printing both variables you are looping on. This should help get an idea of how they work
+
+- in range(a,b,c), c is how many number it will jump over right?
+
+yes
+
+- Is it possible to create a list and then store this list in a file on a computer which can then be called by a program? Perhaps we can store prime numbers in a text file and then have a program import this text file as a list. Having imported the list, the program could then check if a number is composite by checking if any of the prime numbers divide the given number. Also, would it be possible to write a program which calculates prime numbers and then store these numbers in a text file? 
+
+Yes. We will see some examples in the next weeks.
+
+- Can I write the if statement in the function?
+
+Yes
+
+- I am most curious about about the while loops and breaks, versus when to use a for loop. it seems that there may be overlapping situations for them.
+
+You are correct, there are overlaps. We will talk about the ``while`` loop this week.
+
+
+
+
 Week 1
 ~~~~~~~
 
