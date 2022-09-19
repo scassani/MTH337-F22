@@ -1,6 +1,102 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 3
+~~~~~~~
+
+- When we are defining the prime number, is there any situations we can let prime = False?
+
+It depends on how you want to setup your function
+
+- I have never experienced project report and also not proficient in writing English. Would few errors or poor word selection in description impact grade a lot?
+
+Did you look at the rubric on the class website? That contains all of the information
+
+- Are project reports typically due the week they are released?
+
+I usually release the project the week before it is due. Project one was a little a-typical, but that is the reason why we spent almost a full class working on it, and the project deadline was pushed forward. (We will also see short projects, that are introduced on the same week when they are due)
+
+- In what cases is it more beneficial to use a while loop instead of a for loop? Can you use either one for any case or are there specific cases in which one should be used?
+
+They are somewhat equivalent. I usually use a for loop when I know in advance how many iterations I need to do or if I have a list of elements I want to loop on. The while loop is usually used when you are iterating until a specific condition is verified.
+
+- Around how many projects will we have this semester?
+
+8 maybe 9
+
+- How do we apply our lecture notes to the project? The exercises can be done with the lecture notes, but the actual project is completely different. What other resources are we allowed to use besides the ones already stated on the syllabus? 
+
+You can use the functioncs we develop in class (including the lecture notes) in the project. You cannot copy code from the internet and use it on the project. You can however use the internet to understand how a python commend/functoin works. For example let's say that you forgot what ``list`` does. You can use google to find out. You cannot however look online how to write a function that computes false prime numbers, that is plagiarism.
+
+- For the project, would you like us to do a lot of commenting within our code or worry more about explanations of what the functions do in markdown cells before or after the code itself?  For the primary decomposition of the false primes, would you like this to be returned as a list of lists, or should I print out each primary decomposition separately? How should this be formatted?
+
+You need to do both.
+For the primary decomposition you can return it as you prefer as long as it is clear and well formatted. A list of list does not look very well formatted in my opinion.
+
+- Should we have a designated conclusion to our projects, or can we wrap up our findings in a briefer fashion?
+
+You hsould have both. Analysis of the results right after each result and a conclusion which should be sort of a summery of your amin findings and a summary of what you didi in the project.
+
+- a question that I would have is how can the speed of a program be measured to see what is a more efficent way to tackle a problem.
+
+there is a module called ``time`` that can be used to time your code
+
+- I have a little question about python logical and command. I may go to find some resource to help me.
+
+What is the question?
+
+- I am wondering is it possible for me to check how much time did my script run to get the final result?
+
+there is a module called ``time`` that can be used to time your code
+
+- What are the various methods of terminating a 'while' function? Is it just variations on the idea of  'break'?
+
+To terminate a while loop break is the best option. If inside a function you could also use return (depending on what you are trying to do.
+
+- How is pow(a,b,c) faster than  (a**b)%c?
+
+I don't know the exact details, but ``pow`` has been optimized within python.
+
+- Will we have time in class Monday to work on our projects?
+
+No, on Monday we will start new material.
+
+- What is the purpose of doing the ' ' ' comment as opposed to just a regular # comment?
+
+It defines a comment that will be returned if using ``help()`` for that function
+
+- What's the difference of while loop and for loop?
+
+See above for the answer to your question.
+
+- Can the for loop and while loop work together in one code?
+
+yes. More info above in the answer to a similar question.
+
+- While a function turns to False from True in a loop, do I have to put a `break` after the loop?
+
+It depends on what you are trying to do. If you want to stop the loop yes.
+
+- How can I make my code run faster? It currently doesn't have anything too special in it, but I think I need to iterate through less numbers when looking at false primes. 
+
+The order of the operations matter. In general try to avoid nested loops, and try to repeat the code routines that take long the least you can.
+
+- Is using LaTex notation in our markdown cells required for the project when notating a formula otherwise hard to write normally?
+
+Yes! math formulas should look pretty
+
+- I am still confused on what a false prime is and why it has to pass the congruence test to be a false prime. 
+
+That is the definition of false prime.
+
+- What does the while loop do? 
+
+Iterates as long as the condition after ``while`` is True
+
+- I'd like to write a program that runs a while loop and then returns a list. While the loop is running, if a certain condition P holds the loop will finish early and return the list it created. Assuming the loop doesn't finish early I'd like it to append an additional element before returning the list. Outside the body of the while loop I could write something like "if not P: ... return list" and have the program return a different list.   Is there a different way to accomplish the same thing? I'm wondering if there's a way append the additional element while still in the while-loop (although this element gets appended only if the while loop actually finishes).
+
+I would put the append after the while loop, and I would use an if statement to append only when you need to. There are more convoluted ways to do that like ``exceptions`` that might work, but I am not sure you need to go there.
+
 Week 2
 ~~~~~~~
 
