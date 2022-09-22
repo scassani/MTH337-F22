@@ -1,0 +1,36 @@
+Week 3: Sept 12-16
+===================
+
+
+Python
+~~~~~~
+
+* Fine-tuning loops: ``break`` and ``continue``
+* :doc:`Functions </PT/PT-functions>`
+* Logical operators: ``not``, ``and``, ``or``
+* The ``while`` loop
+
+Project 1
+~~~~~~~~~
+
+Due: Tuesday, Sept ,20 11:59 PM.
+
+* :doc:`Prime or not </Projects/prime_or_not/prime_or_not>`.
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The weekly summary google form is due on Friday Sept. 16 at midnight, and is available `**here** <https://forms.gle/GacWWax33298MPwu5>`_
+
+
+Week 3 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week03_in_class.html>`_
+- `Download  <../_static/week03_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+Sample quiz 4
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 4 <../Sample_Quizzes/quiz4/quiz4_sample.pdf>`

@@ -1,0 +1,10 @@
+
+Projects
+========
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 2
+
+	Prime or not <Projects/prime_or_not/prime_or_not>
+	Pythagorean triples <Projects/pythagorean_triples/pythagorean_triples>

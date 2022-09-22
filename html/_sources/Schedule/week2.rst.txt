@@ -1,0 +1,44 @@
+Week 2: Sept 5 - 9
+===================
+
+
+Python
+~~~~~~
+
+* The ``if`` statement
+* :doc:`Lists and "for" loops </PT/PT-lists>`
+* ``range()``
+* Fine-tuning loops: ``break`` and ``continue``
+* :doc:`Functions </PT/PT-functions>`
+
+
+
+Mathematics
+~~~~~~~~~~~
+
+* Divisors
+* Prime numbers
+
+Project 1
+~~~~~~~~~
+
+Due: Friday, September 16, 11:59 PM.
+
+* :doc:`Prime or not </Projects/prime_or_not/prime_or_not>`.
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The weekly summary google form is due on Friday Sept. 9 at midnight, and is available `**here** <https://forms.gle/M1zn8TtPjJRV1sWaA>`_
+
+
+Week 2 notebook
+~~~~~~~~~~~~~~~
+- `View online <../_static/week02_in_class.html>`_
+- `Download  <../_static/week02_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+
+Sample quiz 3
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 3 <../Sample_Quizzes/quiz3/quiz3_sample.pdf>`
