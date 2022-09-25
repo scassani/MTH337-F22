@@ -1,6 +1,106 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 4
+~~~~~~~
+
+- I was wondering what the best way to write our ptriples function is, as far as using nested for loops or a diff way etc.
+
+nested loops will work very well for that
+
+- From this code, even=[k for k in range(-99,100) if k%2==0] print(even)  What does it mean k for k?
+
+It means append k to the list, for each k in range ...
+
+- for drawing the pictures, there are so many plt methods such as plot, axis, yticks, figures. how we compare them when we drawing a picture.
+
+You will just call what you need to use. ``plot`` to plot a curve, ``figure`` to change the figure properties, and so on ... 
+With a little practice it will become very natural.
+
+- Are you more lenient on the first projects since we don't have any feedback yet regarding what we are doing wrong. I'm also not sure how slices work.
+
+Not really (maybe only a little). I have been going over what is expected for the project several times in class. However I plan to return you project 1 before project 2 deadline, so that you can have feedback to improve in project 2. For the slicing, there is some material on the class website, or you can come to office hours.
+
+- Can you provide an example in class of part of code where it has all the elements for a decent project layout? Such as the intro to a specific cell or code, comments within the cell, and then if there needs to be an analysis after, what would you recommend us mentioning?  As for projects, when would you prefer us emailing them to you if we want to receive some feedback? Mostly in regards to the comments and analysis in-between the codes.
+
+Examples of good projects are posted on the class website. You should look into that, and come to office hours if you have questions. To receive feedback on the project expect it can take me up to a couple of days to look into what you send me. So plan accordingly.
+
+- Where can we find all the list of commands we can use when building a graph?
+
+google "plt.plot" it should give you a place to start.
+
+- For this week, we studied "Plotting with matplotlib" and we tried to use this knowledge to draw a circle. Is there any solution to draw others diagram. For example, like triangle and square.
+
+Sure. For a square you just need vertical and horizontal lines, the triangle is a little trickier, but not too bad. You could sketch lines once you know the correct slope.
+
+- Do you have a minimum/maximum size recommendation for graphs or any other stylization preferences?
+
+Usually (6,6), or (8,6)  or (10,8) are good sizes. i look for completeness rather than style. Labels, title, lengend,...
+
+- Are there any sources we can use to do research for projects other than our notes from class?
+
+You can look online to find more information on the topic of the project. However careful not to copy text/code
+
+- a question i have would be why do the marker labels sometimes not work when makign a graph.
+
+Can you show me an example?
+
+- When is the ";" required when writing the code for plots?
+
+On the last ``plt`` command you run
+
+- I am wondering if I can add some notes or comments in the corner of the figure that is plotted by plt.plot() function? 
+
+There is a ``plt.text`` command that allows for that.
+
+- Can we have an answer sheet of weekly quiz? 
+
+You can test all of the python part by just running the code in the notebook, and I will be happy to answer any question on the code at office hours.
+
+- Will we have time to work on the project Wednesday in class?
+
+We will work on the project for sure on Monday. IDK about Wednesday
+
+- Does compressing lists make them more efficient to run on Python, or is it mainly to make the code look cleaner? 
+
+Cleaner code
+
+- The part where we learnt how to print names with greetings, what would the could look like,  if we wanted to print each sentence in a new line?
+
+That code was just building the list. To print each greeting on a new line you can do a loop with a print command inside.
+
+- Is it fine to use list comprehension if the codes are too long?
+
+It is not wrong, but the code will not look nice. Keep in mind that code readability is very important.
+
+- When plotting graphs, how do we name the axis' and give the graph a title? How did you plot the x and y axis title?
+
+plt.ylabel for the y-axis, plt.title for the title 
+
+- What is the purpose and usage of -= and +=. I am having some issues figuring this out.
+
+``x+=2`` is the same as ``x=x+2`` just more concise.
+
+- We used a for loop to define a variable in a graph. Will we use a while loop to do something similar? 
+
+Do you mean list comprehension? While loops do not work in list comprehension.
+
+- Are the grade cutoffs on the website ever adjusted based on the class average?
+
+No, I do not curve grades
+
+- Can we do a project relating to manipulating a data set.  Like a data science based project?
+
+We might do something close to that. I haven't decided yet what the last couple of projects will be.
+
+- In class I worked on the pythagorean theorem project code and successfully was producing pythagorean triples. But, I also had [0,0,0] as a triple and multiple sets of the each set. I am not sure how to get around this issue.  
+
+I can look at your code on Monday. Just raise your hand when you are given time to sork on the project.
+
+- Can you also do a while loop in a list?
+
+Do you mean list comprehension? While loops do not work in list comprehension.
+
 Week 3
 ~~~~~~~
 
