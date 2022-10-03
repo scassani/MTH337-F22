@@ -1,6 +1,101 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 5
+~~~~~~~
+
+- For the array we learned this week, we cannot combine one array with numbers by the array with strings.
+
+No, they must have the same variable type
+
+- Is that possible to convert numpy array back to list? Also, I am still confused about how to use np.log1p function
+
+list(yourarray).
+np.log1p computes the natural log of (x+1)
+
+- What plots other than line and scatter plots are we able to plot on python?
+
+pie charts, histograms,....
+
+- What would your best advice be on comments throughout the cells? What in your opinion is enough without causing for too much clutter and confusion?
+
+It really depends on the functions. I would try to put a comment after each significant part of the function
+
+- how to change the size of the graph? 
+
+plt.figure(figsize=(sizex,sizey))
+
+- Will numpy be used from here on out for all projects?
+
+No. but we will use it in a few of them
+
+- How many triples do we have to plot in the project? I have question about how many data points we need for draw a picture. What domain/range do you recommend when plotting a graph with many points (like the pythagorean triples)?
+
+I would go up to a,b=1000 but you can go higher if the code is not too slow
+
+- For this week we studied the Numpy, so how can we use Numpy to do the division?
+
+Do you mean in project 2? Yes you can use it
+
+- How many total projects will we have this semester?
+
+This was asked in week 3. The answer is below.
+
+- Will we be learning in the future some way to test how "expensive" certain function are?
+
+time-wise I will show you on Monday
+
+- For what cases do we use np.ones or np.zeros?
+
+It's a quick way to define a vector of ones or zeros. It is useful when you need to create large arrays and/or matrices
+
+- Is the numphy gcd function as efficient as the one we developed during class?
+
+That is a vectorial version of the regular gcd
+
+- What’s the difference between plt.scatter and plt.plot? How different should the syntax be? Can we use that function in our project?
+
+You can use scatter. That is a scatter plot, and the synthax shoudl be similar.
+
+- Will we be using numpy regularly?
+
+We will use it for a few projects.
+
+- I'm confused on the np.empty() function. I don't understand what it does.
+
+It creates an empty array. It reserves the space in the memory for an array. Then you can change it's values later.
+
+- When having a large amount of string variables, would a list or array be more beneficial? I can tell that for numbers, an array would be more beneficial but I was curious about strings. How would you edit a specific string within an array?
+
+You cannot edit strings as they are non mutable. I think using lists would probably make things a littel easier, but it's not a general rule.
+
+- What was wrong with "np.log([1,2,3])"? Why couldn't we do that, and what would be the proper way to use that?
+
+np.log is a vectorail function, so it would be more consistent to use an array as an argument. np.log(np.array([1,2,3]))
+
+- is there a built in fuction to graph in polar coordinates versus needing to convert it back to standard.
+
+`try here <https://www.pythonpool.com/matplotlib-polar-plot/>`_
+
+- Can we use our way to find the co-prime?
+
+What do you mean? You shoudl define a function called ``mygcd``
+
+- Is there a simpler way to plot things that putting all the elements into lists and then plotting them together with something.plot? Is there a function that handles all the list comprehension for us?
+
+Not that I know of.
+
+- For the code in class, can the range become x instead of len(x)? 
+for i in range(len(x)):     
+	if x[i]%1==0:         	
+	x[i]=x[i]*2
+	
+it si not going to work. range needs a number and x is a list.
+	
+- I found a different way to find Pythagorean triples than what was taught in class. Will that make a difference? Also, will we get back our project 1 grades before project two is due?
+
+It depends what you mean with "a different way". It is important that (1) the code you submit is your own and it is not copied from somewhere else, (2) you explain in a very detailed way the reasoning behind your work, (3) you cite/reference any external source where you got material and/or ideas from. 
+
 Week 4
 ~~~~~~~
 

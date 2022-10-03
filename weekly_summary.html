@@ -25,7 +25,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Week 4: Sept 19-23" href="Schedule/week4.html" />
+    <link rel="prev" title="Week 5: Sept 26 - Sept 30" href="Schedule/week5.html" />
   
    
 
@@ -37,7 +37,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="Schedule/week4.html" title="Week 4: Sept 19-23"
+          <a href="Schedule/week5.html" title="Week 5: Sept 26 - Sept 30"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 
@@ -56,6 +56,7 @@
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">Answers to Weekly Summary questions</a><ul>
+<li><a class="reference internal" href="#week-5">Week 5</a></li>
 <li><a class="reference internal" href="#week-4">Week 4</a></li>
 <li><a class="reference internal" href="#week-3">Week 3</a></li>
 <li><a class="reference internal" href="#week-2">Week 2</a></li>
@@ -67,11 +68,9 @@
     </div>
   </div>
 </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="Schedule/week4.html"
-                          title="previous chapter">Week 4: Sept 19-23</a></p>
-  </div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Schedule/week5.html"
+                        title="previous chapter">Week 5: Sept 26 - Sept 30</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -109,6 +108,103 @@
             
   <section id="answers-to-weekly-summary-questions">
 <h1>Answers to Weekly Summary questions<a class="headerlink" href="#answers-to-weekly-summary-questions" title="Permalink to this headline">¶</a></h1>
+<section id="week-5">
+<h2>Week 5<a class="headerlink" href="#week-5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>For the array we learned this week, we cannot combine one array with numbers by the array with strings.</p></li>
+</ul>
+<p>No, they must have the same variable type</p>
+<ul class="simple">
+<li><p>Is that possible to convert numpy array back to list? Also, I am still confused about how to use np.log1p function</p></li>
+</ul>
+<p>list(yourarray).
+np.log1p computes the natural log of (x+1)</p>
+<ul class="simple">
+<li><p>What plots other than line and scatter plots are we able to plot on python?</p></li>
+</ul>
+<p>pie charts, histograms,….</p>
+<ul class="simple">
+<li><p>What would your best advice be on comments throughout the cells? What in your opinion is enough without causing for too much clutter and confusion?</p></li>
+</ul>
+<p>It really depends on the functions. I would try to put a comment after each significant part of the function</p>
+<ul class="simple">
+<li><p>how to change the size of the graph?</p></li>
+</ul>
+<p>plt.figure(figsize=(sizex,sizey))</p>
+<ul class="simple">
+<li><p>Will numpy be used from here on out for all projects?</p></li>
+</ul>
+<p>No. but we will use it in a few of them</p>
+<ul class="simple">
+<li><p>How many triples do we have to plot in the project? I have question about how many data points we need for draw a picture. What domain/range do you recommend when plotting a graph with many points (like the pythagorean triples)?</p></li>
+</ul>
+<p>I would go up to a,b=1000 but you can go higher if the code is not too slow</p>
+<ul class="simple">
+<li><p>For this week we studied the Numpy, so how can we use Numpy to do the division?</p></li>
+</ul>
+<p>Do you mean in project 2? Yes you can use it</p>
+<ul class="simple">
+<li><p>How many total projects will we have this semester?</p></li>
+</ul>
+<p>This was asked in week 3. The answer is below.</p>
+<ul class="simple">
+<li><p>Will we be learning in the future some way to test how “expensive” certain function are?</p></li>
+</ul>
+<p>time-wise I will show you on Monday</p>
+<ul class="simple">
+<li><p>For what cases do we use np.ones or np.zeros?</p></li>
+</ul>
+<p>It’s a quick way to define a vector of ones or zeros. It is useful when you need to create large arrays and/or matrices</p>
+<ul class="simple">
+<li><p>Is the numphy gcd function as efficient as the one we developed during class?</p></li>
+</ul>
+<p>That is a vectorial version of the regular gcd</p>
+<ul class="simple">
+<li><p>What’s the difference between plt.scatter and plt.plot? How different should the syntax be? Can we use that function in our project?</p></li>
+</ul>
+<p>You can use scatter. That is a scatter plot, and the synthax shoudl be similar.</p>
+<ul class="simple">
+<li><p>Will we be using numpy regularly?</p></li>
+</ul>
+<p>We will use it for a few projects.</p>
+<ul class="simple">
+<li><p>I’m confused on the np.empty() function. I don’t understand what it does.</p></li>
+</ul>
+<p>It creates an empty array. It reserves the space in the memory for an array. Then you can change it’s values later.</p>
+<ul class="simple">
+<li><p>When having a large amount of string variables, would a list or array be more beneficial? I can tell that for numbers, an array would be more beneficial but I was curious about strings. How would you edit a specific string within an array?</p></li>
+</ul>
+<p>You cannot edit strings as they are non mutable. I think using lists would probably make things a littel easier, but it’s not a general rule.</p>
+<ul class="simple">
+<li><p>What was wrong with “np.log([1,2,3])”? Why couldn’t we do that, and what would be the proper way to use that?</p></li>
+</ul>
+<p>np.log is a vectorail function, so it would be more consistent to use an array as an argument. np.log(np.array([1,2,3]))</p>
+<ul class="simple">
+<li><p>is there a built in fuction to graph in polar coordinates versus needing to convert it back to standard.</p></li>
+</ul>
+<p><a class="reference external" href="https://www.pythonpool.com/matplotlib-polar-plot/">try here</a></p>
+<ul class="simple">
+<li><p>Can we use our way to find the co-prime?</p></li>
+</ul>
+<p>What do you mean? You shoudl define a function called <code class="docutils literal notranslate"><span class="pre">mygcd</span></code></p>
+<ul class="simple">
+<li><p>Is there a simpler way to plot things that putting all the elements into lists and then plotting them together with something.plot? Is there a function that handles all the list comprehension for us?</p></li>
+</ul>
+<p>Not that I know of.</p>
+<ul class="simple">
+<li><p>For the code in class, can the range become x instead of len(x)?</p></li>
+</ul>
+<dl class="simple">
+<dt>for i in range(len(x)):</dt><dd><p>if x[i]%1==0:
+x[i]=x[i]*2</p>
+</dd>
+</dl>
+<p>it si not going to work. range needs a number and x is a list.</p>
+<ul class="simple">
+<li><p>I found a different way to find Pythagorean triples than what was taught in class. Will that make a difference? Also, will we get back our project 1 grades before project two is due?</p></li>
+</ul>
+<p>It depends what you mean with “a different way”. It is important that (1) the code you submit is your own and it is not copied from somewhere else, (2) you explain in a very detailed way the reasoning behind your work, (3) you cite/reference any external source where you got material and/or ideas from.</p>
+</section>
 <section id="week-4">
 <h2>Week 4<a class="headerlink" href="#week-4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -507,7 +603,7 @@ For example <code class="docutils literal notranslate"><span class="pre">x=13</s
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="Schedule/week4.html" title="previous chapter (use the left arrow)">Week 4: Sept 19-23</a>
+        <a class="btn btn-default" href="Schedule/week5.html" title="previous chapter (use the left arrow)">Week 5: Sept 26 - Sept 30</a>
       </div>
     
     </div>
@@ -523,7 +619,7 @@ For example <code class="docutils literal notranslate"><span class="pre">x=13</s
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="Schedule/week4.html" title="Week 4: Sept 19-23"
+          <a href="Schedule/week5.html" title="Week 5: Sept 26 - Sept 30"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 
