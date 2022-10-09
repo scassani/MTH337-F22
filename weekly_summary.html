@@ -56,6 +56,7 @@
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">Answers to Weekly Summary questions</a><ul>
+<li><a class="reference internal" href="#week-6">Week 6</a></li>
 <li><a class="reference internal" href="#week-5">Week 5</a></li>
 <li><a class="reference internal" href="#week-4">Week 4</a></li>
 <li><a class="reference internal" href="#week-3">Week 3</a></li>
@@ -110,6 +111,99 @@
             
   <section id="answers-to-weekly-summary-questions">
 <h1>Answers to Weekly Summary questions<a class="headerlink" href="#answers-to-weekly-summary-questions" title="Permalink to this headline">¶</a></h1>
+<section id="week-6">
+<h2>Week 6<a class="headerlink" href="#week-6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Are we able to graph shapes on python that are not polygons?</p></li>
+</ul>
+<p>Do you mean with curves? If you have an equation you can always plot it. There are also libraries that allows you to plot specific shapes.</p>
+<ul class="simple">
+<li><p>Is there anything that we should look out for when mixing arrays and lists in our code? Are there any functions that would not work well with arrays where we should switch back to lists or is python able to handle these changes?</p></li>
+</ul>
+<p>Most of the time python is able to do the conversion by itself, but it is not a great habit, sinc epython might behave in an unexpected way.</p>
+<ul class="simple">
+<li><p>For this week we studied the subplots, can we use subplots to make other figures such as triangles and squares?</p></li>
+</ul>
+<p>Sure</p>
+<ul class="simple">
+<li><p>What is your advice on deciding whether an array or list is better for a code? Is an array better most of the time?</p></li>
+</ul>
+<p>If you need to do operations all at once arrays are better. If you need to store different varaible types or you need to append, lists are better</p>
+<ul class="simple">
+<li><p>Are you going to post our grades for the first project?</p></li>
+</ul>
+<p>They are posted.</p>
+<ul class="simple">
+<li><p>How frequently do these types of functions come up in the real world of coding?</p></li>
+</ul>
+<p>Which type? not clear.</p>
+<ul class="simple">
+<li><p>What would the best way to study for this class be? I feel I know the basics well but implementing them in class is hard for me still when working on new functions.</p></li>
+</ul>
+<p>Practice and keep up with the material. You can find extra practice problems online if you are struggling with some topics</p>
+<p>As for project 3, can you describe pick_p0 again?</p>
+<p>We want the function to pick a point at random inside the polygon with vertices <code class="docutils literal notranslate"><span class="pre">v</span></code>. One way to code it is to generate points at random until the generated point is inside.</p>
+<ul class="simple">
+<li><p>I am wondering is there any way that I can combine two generated graphs to one graph?</p></li>
+</ul>
+<p>Do you mean with subplot or two curves on the same graph?</p>
+<ul class="simple">
+<li><p>“Does the time command track how long for the whole cell or just what’s in between the start and end?</p></li>
+</ul>
+<p>in-between start and end.</p>
+<ul class="simple">
+<li><p>Is there a way to have a specific seed for the random number generator?”</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">random.seed()</span></code> allows you to set a specific random seed</p>
+<ul class="simple">
+<li><p>What and how will the project 3 plot will be as we run in big number?</p></li>
+</ul>
+<p>Look on dircord. A classamte posted their results.</p>
+<ul class="simple">
+<li><p>For the project, do we have to use <cite>random</cite> to find a random point, or we can choose a point?</p></li>
+</ul>
+<p>It has to be a random point</p>
+<ul class="simple">
+<li><p>Are the future projects going to be more challenging than the ones we have already done?</p></li>
+</ul>
+<p>yes.</p>
+<ul class="simple">
+<li><p>On the project page it say use “contain_points( (x,y) )” to check if point is inside the path. Is this a function we have to create and why does it is have two sets of parenthesis?</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">contain_points</span></code> is available in python. (x,y) are the coordinates of the point.</p>
+<ul class="simple">
+<li><p>Will we go over function pick_p1 on Monday class?</p></li>
+</ul>
+<p>yes</p>
+<ul class="simple">
+<li><p>So what is the “.random” usually used for?</p></li>
+</ul>
+<p>Generate a random number. For example the movement direction of a cell can be, in some cases, approximated with a random number.</p>
+<ul class="simple">
+<li><p>is there another large import that presents more efficent ways to do simple tasks in python the way that numpy replaced many of the math options</p></li>
+</ul>
+<p>not that I know of. (bu tI might be wrong)</p>
+<ul class="simple">
+<li><p>I’m wondering if mathplotlib is the only module for graphing?</p></li>
+</ul>
+<p>No, but is the most used. <code class="docutils literal notranslate"><span class="pre">bokeh</span></code> is another one</p>
+<ul class="simple">
+<li><p>I still have some question about random number and drawing</p></li>
+</ul>
+<p>This is not a question!</p>
+<ul class="simple">
+<li><p>Can we do calculations in random?</p></li>
+</ul>
+<p>You cna use random numbers for calculations.</p>
+<ul class="simple">
+<li><p>Is there any benefit to using C instead of Numpy? I understand that Numpy uses C code, but would it be more efficient to just use C?</p></li>
+</ul>
+<p>C has a different syntax, and is less user friendly. But numpy gives us the option to be as-fast-as C using python</p>
+<ul class="simple">
+<li><p>Is numpy just more efficient than python’s data structures in general or is there something specific (like allocating the array in numpy) that is efficient rather than all the convenient functions?</p></li>
+</ul>
+<p>operations on arrays will be faster in numpy than using a for loop.</p>
+</section>
 <section id="week-5">
 <h2>Week 5<a class="headerlink" href="#week-5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -535,7 +629,7 @@ For example <code class="docutils literal notranslate"><span class="pre">x=13</s
 <ul class="simple">
 <li><p>How should I go about staying on top of lesrning the code for this class? Is there a study method you recommend or should I be practicing outside of class, etc…</p></li>
 </ul>
-<p>Practice and keep up with the material. You can find extra practice problems on line if you are struggling with some topics</p>
+<p>Practice and keep up with the material. You can find extra practice problems online if you are struggling with some topics</p>
 <ul class="simple">
 <li><p>Is this class based more on coding or solving math related problems?</p></li>
 </ul>
