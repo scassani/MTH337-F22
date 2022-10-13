@@ -1,0 +1,36 @@
+Week 7: Oct 10 - Oct 14
+=======================
+
+Project 3
+~~~~~~~~~
+
+* :doc:`Jump around </Projects/jump_around/jump_around>`.
+
+
+Python
+~~~~~~
+
+* :doc:`Subplots </PT/PT-matplotlib_subplots/PT-matplotlib_subplots>`
+* :doc:`Numpy arrays </PT/PT-numpy_arrays/PT-numpy_arrays>`
+* indexing and slicing of numpy arrays
+* numpy arrays and matplotlib
+* random numbers
+* :doc:`Multidimensional numpy arrays </PT/PT-multidimensional_numpy_arrays/PT-multidimensional_numpy_arrays>`
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The weekly summary google form is available `**here** <https://forms.gle/zcocTUTX1Hz6aRvg9>`_ 
+
+Week 7 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week07_in_class.html>`_
+- `Download  <../_static/week07_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+
+Sample quiz 
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 8 <../Sample_Quizzes/quiz8/quiz8_sample.pdf>`
