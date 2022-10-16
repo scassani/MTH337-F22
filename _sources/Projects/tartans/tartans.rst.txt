@@ -1,0 +1,378 @@
+
+Tartans
+=======
+
+.. rubric:: (due: Sunday, October 23, 11:59 PM)
+
+
+Tartan is a traditional Scottish fabric pattern consisting of
+intersecting horizontal and vertical stripes in various colors.
+Tartans are a part of the Scottish highland dress.
+
+ .. figure:: Campbell_of_Breadalbane.png
+    :width: 350px
+    :align: center
+
+    *A lithograph of a member of the Scottish Highland clan of Campbell dressed
+    in the Campbell tartan.*
+
+The `Scottish Register of Tartans <https://www.tartanregister.gov.uk/index>`_
+lists thousands of tartan designs that were created for use by various clans,
+localities, organizations etc.
+
+Making a tartan
+---------------
+
+Vertical and horizontal stripes of a tartan have the same pattern:
+
+ .. image:: warp_weft.png
+       :width: 300px
+       :align: center
+
+In order to combine these pictures into an image of a tartan we can use
+a checkerboard that alternates between showing vertical and horizontal stripes.
+In the image below vertical stripes were given slightly darker colors to show
+this pattern more clearly:
+
+ .. image:: campbell_sample1.png
+       :width: 250px
+       :align: center
+
+The resulting image will look as follows:
+
+ .. image:: campbell_sample2.png
+       :width: 250px
+       :align: center
+
+A more realistic image of a tartan can be obtained by modifying the way in which
+vertical and horizontal stripes are combined. Instead of using the checkerboard
+pattern, each column of pixels shows two pixels of vertical stripes, then
+two pixels of horizontal stripes and so on. In each subsequent column this pattern
+gets shifted down by one pixel:
+
+ .. image:: campbell_sample3.png
+       :width: 250px
+       :align: center
+
+This method was used to produce the following picture:
+
+ .. image:: campbell_sample4.png
+       :width: 250px
+       :align: center
+
+
+
+Recipe for a tartan
+-------------------
+
+To specify the design of a tartan it suffices to give widths and colors
+of its vertical stripes. Since horizontal stripes have the same pattern as the
+vertical ones, there is no need to describe them separately. For example, the pattern
+of stripes of the Campbell tartan can be described as follows:
+
+B14 K6 B6 K6 B6 K32 OG32 K6 OG32 K32 B32 K6 B6 K6 B32 K32 OG32 K6 OG32 K32 B6 K6 B6 K6 B28
+
+The letter codes B, K, OG indicate different stripe colors, and the number following
+each letter code is the width of the stripe. In the production of
+tartan fabrics this number gives the number of threads in the stripe. In computer
+generated images of tartans we can take it to be the width of the stripe in pixels or some
+other units. The pattern will repeat to fill an image of an arbitrary size.
+
+To complete the description of a tartan one needs to specify what color each letter
+code stands for. This can be done e.g. by giving RGB coordinates of each color:
+
+B : [52, 80, 100],   K : [16, 16, 16],   OG : [92, 100, 40]
+
+
+Project
+-------
+
+The table below lists several tartan patterns. Find the tartan assigned
+to you and write a function `show_tartan(n)` that produces an image of 
+this tartan of dimensions n x n threads, with pattern repeating as many times as needed to fill the whole image.
+
+
+**Note.**  This is a programming project. Your project report does not need to
+include narrative, beyond comments explaining how your code works. The project will
+be graded according to the following rubrics:
+
+* Reproduction of the assigned tartan: 70%
+* Report organization and code documentation: 30%
+
+
++---------------------------+------------------------------------------------------------------------+
+| Tartan                    | Description                                                            |
++===========================+========================================================================+
+| .. image:: VanLoo.png     | | **Van Loo (Balk)**                                                   |
+|    :width:  150px         | | LB5 P4 B60 LB10 K50 B60 LB10 B60 K50 LB10 B60 P4 LB5                 |
+|                           |                                                                        | 
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | B : [44, 44, 128]                                                    |
+|                           | | P : [120, 0, 120]                                                    |
+|                           | | LB : [40, 136, 196]                                                  |
+|                           | | AY : [220, 148, 60]                                                  |
+|                           | | LO : [236, 128, 72]                                                  |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: JubileeII.png  | | **Holyrood Golden Jubilee II (Baque)**                               |
+|    :width:  150px         | | NB48 A24 GO6 WW6 GO6 DR22 NB10 DR4 GO14 WW4 GO14                     |
+|                           | | DR4 NB10 DR22 GO6 WW6 GO6 A24 NB48                                   |
+|                           |                                                                        |
+|                           | | A : [92, 140, 168]                                                   |
+|                           | | DR : [136, 0, 0]                                                     |
+|                           | | GO : [188, 140, 0]                                                   |
+|                           | | WW : [248, 248, 248]                                                 |
+|                           | | AB : [24, 112, 164]                                                  |
+|                           | | NB : [0, 60, 100]                                                    |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: MacKusick.png  | | **MacKusick (Chen H.)**                                              |
+|    :width:  150px         | | RB8 K4 RB6 K24 P6 LN2 P6 K32 G6 LN4 DR2 LN4 G16 LN4                  |
+|                           | | DR2 LN4 G6 K32 P6 LN2 P6 K24 RB6 K4 RB8                              |
+|                           |                                                                        |
+|                           | | RB : [0, 0, 140]                                                     |
+|                           | | G : [0, 120, 0]                                                      |
+|                           | | DR : [140, 0, 0]                                                     |
+|                           | | MY : [200, 140, 0]                                                   |
+|                           | | K : [0, 0, 0]                                                        |
+|                           | | LN : [255, 255, 255]                                                 |
+|                           | | SB : [120, 140, 180]                                                 |
+|                           | | P : [100, 0, 140]                                                    |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Garten.png     | | **Boat of Garten (Chen J.)**                                         |
+|    :width:  150px         | | MB62 W8 K4 W14 P4 G6 Y4 MB32 Y4 G6 P4 W14 K4 W8 MB62                 |
+|                           |                                                                        |
+|                           | | MB : [20, 30, 70]                                                    |
+|                           | | W : [255, 255, 255]                                                  |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | P : [90, 0, 140]                                                     |
+|                           | | G : [0, 80, 32]                                                      |
+|                           | | Y : [232, 192, 0]                                                    |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Aberuchill.png | | **Aberuchill (Corrente)**                                            |
+|    :width:  150px         | | LP4 K2 OT10 DP30 OT30 G55 K4 O6 K4 G55 OT30 DP30 OT10 K2 LP4         |
+|                           |                                                                        |
+|                           | | LP : [180, 104, 172]                                                 |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | OT : [96, 56, 0]                                                     |
+|                           | | DP : [68, 0, 68]                                                     |
+|                           | | G : [0, 104, 24]                                                     |
+|                           | | O : [216, 124, 0]                                                    |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: CarsonRed.png  | | **Carson Red (Gebman)**                                              |
+|    :width:  150px         | | A19 R4 A6 R4 A6 K86 R44 G6 R44 K86 A6 R4 A6 R4 A19                   |
+|                           |                                                                        |
+|                           | | R : [200, 0, 0]                                                      |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | G : [0, 104, 24]                                                     |
+|                           | | A : [68, 108, 132]                                                   |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Green.png      | | **All Ireland Green (Green)**                                        |
+|    :width:  150px         | | G6 LG4 DR4 G60 N4 LG8 N4 DG4 N2 DG40 N2 LG4 DR8 LG4 N2               |
+|                           | | DG40 N2 DG4 N4 LG8 N4 G60 DR4 LG4 G6                                 |
+|                           |                                                                        |
+|                           | | DG : [0, 56, 32]                                                     |
+|                           | | DR : [136, 0, 0]                                                     |
+|                           | | G : [0, 104, 24]                                                     |
+|                           | | LG : [40, 156, 24]                                                   |
+|                           | | N : [201, 201, 201]                                                  |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Halesowen.png  | | **Halesowen (Hastings)**                                             |
+|    :width:  150px         | | W9 RB6 Y6 RB48 NB48 Y4 NB4 Y4 NB4 Y4 NB48 RB48 Y6 RB6 W9             |
+|                           |                                                                        |
+|                           | | W : [224, 224, 224]                                                  |
+|                           | | RB : [28, 0, 112]                                                    |
+|                           | | Y : [232, 192, 0]                                                    |
+|                           | | NB : [0, 60, 100]                                                    |
++---------------------------+------------------------------------------------------------------------+
+| .. image::  Wales.png     | | **Benyon of Wales (Huang)**                                          |
+|    :width:  150px         | | DB11 K1 HG3 DB6 K1 DB6 HG3 DB4 HG7 DB11 Y1 DB11 HG7 Y2 K6 K36 Y4     | 
+|                           | | DG12 DB24 Y1 DB24 DG12 DB5 DG3 DB6 K4 DB6 DG3 K2 DB32 K2 DG3 DB6     |
+|                           | | K4 DB6 DG3 DB5 DG12 DB24 Y1 DB24 DG12 Y4 K36 K6 Y2 HG7 DB11 Y1 DB11  | 
+|                           | | HG7 DB4 HG3 DB6 K1 DB6 HG3 K1 DB11                                   |
+|                           |                                                                        |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | DB : [32, 32, 96]                                                    |
+|                           | | DG : [0, 56, 32]                                                     |
+|                           | | HG : [40, 88, 0]                                                     |
+|                           | | Y : [232, 192, 0]                                                    |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Gem.png        | | **Gem (Li)**                                                         |
+|    :width:  150px         | | Y6 DB14 R11 DB140 R11 DB14 Y5                                        |
+|                           |                                                                        |
+|                           | | Y : [232, 192, 0]                                                    |
+|                           | | DB : [32, 32, 96]                                                    |
+|                           | | R : [200, 0, 0]                                                      |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Accenture.png  | | **Accenture (Liu)**                                                  |
+|    :width:  150px         | | W3 B50 P42 N6 G42 R4 G4 B8 N2 P6 N2 B8 G4 R4 G42 N6 P42 B50 W3       |
+|                           |                                                                        |
+|                           | | B : [44, 44, 128]                                                    |
+|                           | | P : [120, 0, 120]                                                    |
+|                           | | G : [0, 104, 24]                                                     |
+|                           | | R : [200, 0, 0]                                                      |
+|                           | | W : [224, 224, 224]                                                  |
+|                           | | N : [136, 136, 136]                                                  |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Avalon.png     | | **Avalon (Loughrey)**                                                |
+|    :width:  150px         | | R5 G6 Y12 WW6 Y10 K110 WW10 K110 Y10 WW6 Y12 G6 R5                   |
+|                           |                                                                        |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | WW : [248, 248, 248]                                                 |
+|                           | | Y : [232, 192, 0]                                                    |
+|                           | | WG : [64, 128, 96]                                                   |
+|                           | | G : [0, 104, 24]                                                     |
+|                           | | R : [200, 0, 0]                                                      |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: King.png       | | **King (Lu H.)**                                                     |
+|    :width:  150px         | | G1 R70 G4 K4 Y4 G32 B28 R4 W4 R4 B28 G32 Y4 K4 G4 R70 G1             |
+|                           |                                                                        |
+|                           | | G : [0, 104, 24]                                                     |
+|                           | | R : [200, 0, 0]                                                      |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | Y : [232, 192, 0]                                                    |
+|                           | | B : [44, 44, 128]                                                    |
+|                           | | W : [224, 224, 224]                                                  |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: QueenOS.png    | | **Queen of Scots (Lu X.)**                                           |
+|    :width:  150px         | | R34 B8 R2 B8 G4 K6 G2 K6 G44 K6 G2 K6 G4 B8 R2 B8 R34                |
+|                           |                                                                        |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | G : [0, 104, 24]                                                     |
+|                           | | R : [144, 28, 56]                                                    |
+|                           | | B : [120, 0, 120]                                                    |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: PrincessD.png  | | **Princess Diana (Nichele)**                                         |
+|    :width:  150px         | | K14 R4 K4 R4 K4 G36 R4 G36 W2 B24 A2 R16 A2                          |
+|                           | | B24 W2 G36 R4 G36 K4 R4 K4 R4 K14                                    |
+|                           |                                                                        |
+|                           | | B : [0, 0, 140]                                                      |
+|                           | | G : [0, 120, 0]                                                      |
+|                           | | R : [140, 0, 0]                                                      |
+|                           | | K : [0, 0, 0]                                                        |
+|                           | | W : [200, 200, 200]                                                  |
+|                           | | A : [120, 140, 180]                                                  |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Park.png       | | **Park (Park)**                                                      |
+|    :width:  150px         | | G3 R4 G6 R8 G68 K4 G4 K4 G8 K32 B32 R6 B32                           |
+|                           | | K32 G8 K4 G4 K4 G68 R8 G6 R4 G3                                      |
+|                           |                                                                        |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | B : [44, 44, 128]                                                    |
+|                           | | G : [0, 104, 24]                                                     |
+|                           | | R : [200, 0, 0]                                                      |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Beatty.png     | | **Beatty (Simons)**                                                  |
+|    :width:  150px         | | K6 FSB6 RB56 MY16 K20 MY4 K4 LN4 K8 G32 DR24 K4 DR12 LN4 DR12 K4     |
+|                           | | DR24 G32 K8 LN4 K4 MY4 K20 MY16 RB56 FSB6 K6                         |
+|                           |                                                                        |
+|                           | | RB : [0, 0, 140]                                                     |
+|                           | | G : [0, 120, 0]                                                      |
+|                           | | DR : [140, 0, 0]                                                     |
+|                           | | MY : [200, 140, 0]                                                   |
+|                           | | K : [0, 0, 0]                                                        |
+|                           | | LN : [200, 200, 200]                                                 |
+|                           | | FSB : [52, 116, 252]                                                 |
+|                           | | P : [100, 0, 140]                                                    |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Singh.png      | | **Singh (Singh)**                                                    |
+|    :width:  150px         | | PH3 DR6 PH68 G36 MY4 G36 LN4 DR6 LN4 G36 MY4 G36 PH68 DR6 PH3        |
+|                           |                                                                        |
+|                           | | DR : [136, 0, 0]                                                     |
+|                           | | G : [0, 104, 24]                                                     |
+|                           | | PH : [108, 0, 112]                                                   |
+|                           | | LN : [192, 192, 192]                                                 |
+|                           | | MY : [208, 152, 0]                                                   |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Smith1.png     | | **Smith, Sir William (smith E.)**                                    |
+|    :width:  150px         | | A3 B36 K40 G40 K2 YY6 K2 G40 K40 B36 A3                              |
+|                           |                                                                        |
+|                           | |  A : [92, 140, 168]                                                  |
+|                           | |  K : [16, 16, 16]                                                    |
+|                           | |  B : [44, 44, 128]                                                   |
+|                           | |  G : [0, 104, 24]                                                    |
+|                           | |  YY : [252, 204, 0]                                                  |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Smith2.png     | | **Smith (smith G.)**                                                 |
+|    :width:  150px         | | DR4 K4 G28 K24 B28 FSB8 B28 K24 G28 K4 MY8 K4 G28 K24 B28            |
+|                           | | FSB8 B28 K24 G28 K4 DR4                                              |
+|                           |                                                                        |
+|                           | |  K : [16, 16, 16]                                                    |
+|                           | |  DR : [136, 0, 0]                                                    |
+|                           | |  FSB : [36, 116, 232]                                                |
+|                           | |  G : [0, 104, 24]                                                    |
+|                           | |  MY : [208, 152, 0]                                                  |
+|                           | |  B : [44, 44, 128]                                                   |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Queensland.png | | **Queensland (Sonin)**                                               |
+|    :width:  150px         | | R5 G12 P10 G20 Y12 B30 A44 W36 A44 B30 Y12 G20 P10 G12 R5            |
+|                           |                                                                        |
+|                           | | A : [92, 140, 168]                                                   |
+|                           | | B : [44, 44, 128]                                                    |
+|                           | | P : [196, 156, 216]                                                  |
+|                           | | R : [200, 0, 0]                                                      |
+|                           | | W : [224, 224, 224]                                                  |
+|                           | | Y : [232, 192, 0]                                                    |
+|                           | | G : [0, 156, 36]                                                     |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Robinson.png   | | **Robinson (Street)**                                                |
+|    :width:  150px         | | Y2 B32 G4 B4 G32 K4 W32 LB4 W4 LB32 Y4 LB32 W4 LB4 W32               |
+|                           | | K4 G32 B4 G4 B32 Y2                                                  |
+|                           |                                                                        |
+|                           | | Y : [255, 255, 0]                                                    |
+|                           | | B : [0, 64, 128]                                                     |
+|                           | | G : [0, 128, 0]                                                      |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | W : [255, 255, 255]                                                  |
+|                           | | LB : [0, 128, 255]                                                   |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Cairn.png      | | **Cairn (Tear)**                                                     |
+|    :width:  150px         | | N6 W80 DR4 DB4 DR4 DB12 DR16 DB8 DR16 DB8 DR16 DB4                   |
+|                           | | OG32 DY4 OG32 DB4 DR16 DB8 DR16 DB8 DR16 DB12 DR4 DB4 DR4 W80 N6     |
+|                           |                                                                        |
+|                           | | W : [224, 224, 224]                                                  |
+|                           | | DR : [136, 0, 0]                                                     |
+|                           | | DB : [32, 32, 96]                                                    |
+|                           | | OG : [92, 100, 40]                                                   |
+|                           | | DY : [232, 192, 0]                                                   |
+|                           | | N : [136, 136, 136]                                                  |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Turner.png     | | **Turner (Turner)**                                                  |
+|    :width:  150px         | | R48 K24 N14 K10 WW6 K10 N14 K24 R48                                  |
+|                           |                                                                        |
+|                           | | WW : [252, 252, 252]                                                 |
+|                           | | N : [136, 136, 136]                                                  |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | R : [200, 0, 0]                                                      |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Wolfe.png      | | **Wolfe (Tweedy)**                                                   |
+|    :width:  150px         | | AY4 AR72 AG8 AR26 AG26 AR8 AG8 AR8 AG26 AR26 AG8 AR72 AY4            |
+|                           |                                                                        |
+|                           | | AG : [0, 100, 60]                                                    |
+|                           | | AR : [232, 96, 0]                                                    |
+|                           | | AY : [220, 148, 60]                                                  |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Hughes.png     | | **Hughes (Viola)**                                                   |
+|    :width:  150px         | | FSB4 K24 B6 FSB8 B6 K6 YY72 B6 FSB4 YY6 FSB4 B6 YY72                 |
+|                           | | K6 B6 FSB8 B6 K24 FSB4                                               |
+|                           |                                                                        |
+|                           | |  YY : [252, 204, 0]                                                  |
+|                           | |  B : [44, 44, 128]                                                   |
+|                           | |  K : [16, 16, 16]                                                    |
+|                           | |  FSB : [36, 116, 232]                                                |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: Lewis.png      | | **MacLeod of Lewis (Zeng)**                                          |
+|    :width:  150px         | | K16 Y4 K32 Y48 R4 Y48 K32 Y4 K16                                     |
+|                           |                                                                        |
+|                           | | K : [16, 16, 16]                                                     |
+|                           | | R : [200, 0, 0]                                                      |
+|                           | | Y : [216, 176, 0]                                                    |
++---------------------------+------------------------------------------------------------------------+
+| .. image:: AilsaNavy.png  | | **Ailsa Navy (Zou)**                                                 |
+|    :width:  150px         | | RB8 W6 RB56 W64 K6 W8 K6 W64 RB56 W6 RB8                             |
+|                           |                                                                        |
+|                           | | W : [240, 224, 200]                                                  |
+|                           | | RB : [28, 0, 112]                                                    |
+|                           | | K : [16, 16, 16]                                                     |
++---------------------------+------------------------------------------------------------------------+
+
+
+

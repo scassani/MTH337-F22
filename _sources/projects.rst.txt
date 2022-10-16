@@ -9,3 +9,4 @@ Projects
 	Prime or not <Projects/prime_or_not/prime_or_not>
 	Pythagorean triples <Projects/pythagorean_triples/pythagorean_triples>
 	Jump around <Projects/jump_around/jump_around>
+	Tartans <Projects/tartans/tartans>

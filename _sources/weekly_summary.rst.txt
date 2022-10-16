@@ -1,6 +1,99 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 7
+~~~~~~
+
+- In this week we studied color in matplotlib, why we order the red, green and blue as [1,2,3]?
+
+We order them as [0,1,2]. I believe that is the convention that is used. I do not know specifically why red is the first one.
+
+- If we feel as though we hit a wall with the extent of our coding skills, and the depth we can take this project, is that a good place to stop? I have a bunch of different plots with different vertices and some origin inclusion as well to change up the fractal patterns, and I found some interesting hypotheses, but they all seem out of reach in terms of skill level.
+
+I think it would be a good place to stop
+
+- What is exactly transpose mean? Just switching rows and columns?
+
+yes
+
+- Like you said in office hours will we have to do an extra credit assignment at the end of the semester to get another quiz and one project dropped?
+
+yes. (it is a survey not an extra assignment)
+
+- When doing the command img.show, what does the last value mean. In class we talked about the result of the value 3, but I got a value of 4 for my image, so I was confused as to what that meant. 
+
+transparency.
+
+- Is the analysis part of the project up to our discretion, or just what you tell us to look at during class?
+
+In class I try to give you some ideas, but then it is up to you to develop them
+
+- My img.shape had 4 dimensions instead of 3. I am assuming this is because I used a partially transparent image for the example. Do you know if there are any functions that will add/remove transparency from a certain part of the image or do these functions only work with the red, green, blue scale?
+
+You can set transparency = 1 (or 255) to get rid of it
+
+- I am wondering how to whats the difference between np.linspace and np.arange? 
+
+``np.linspace(a,b,n)`` returns ``n`` equispaced nodes in the interval [a,b]
+
+``np.arange(a,b,c)`` returns nodes (points) from teh interval [a,b) with a step of ``c``
+
+- Will we need to use matplotlib.cm in our next project?
+
+no
+
+- Why divide the color by 255?
+
+It has to do with the number of bits used. There are 8 bits, so 2^8 =  256 possible numbers
+
+- Towards the end of the lecture you mentioned the index for the RGB colors switched to be at the end of the list, can you explain why that is again?
+
+the first index gives the row, the second the column and the third the RGB.
+
+- What could I do if I want to append things to an array?
+
+You should not. You can use ``np.append``
+
+- Are color maps something used frequently in real world applications? Is this something that if we plan on coding in the future we will see again, or is it something we are mostly learning to use for projects in this class?
+
+Colormaps are widely used in the real world. Every time you are displaying complex results you might wanto to choose your color map.
+
+- I have a question about the reshape, is this just make a list of numbers to multiple parts? what is reshape usually used as?
+
+It changes the shape of the array. for example from 8x1 to 2x4
+
+- a question i would have would be what is the difference between 8 bit and 16 bit color in pcs if they are all just stored as [255,255,255] 
+
+Technically 16bit colors have way more (2^16) than 256 possible 'shades'.
+
+- Could you please give the steps to use the image on a Mac again?
+
+Download the image
+
+go to Dowload folder
+
+move image in current notebook directory
+
+- Can you change the dimensions of an image on Python?
+
+Techincally yes. It is not straightforward as you might need to interpolate the image to fix the lost pixels
+
+Can we insert picture in  our project by using imshow?
+
+There is a different way to do it
+
+- Will there be any extra credit opportunities?
+
+sort of, in one of the projects (5)
+
+- I have question about logic to write p1 function 
+
+The idea is to write a function that given a point in the polygon will follow the algorithm to
+
+Choose a vertex at random
+
+move f% of the distance between the verstx and the point to find p1
+
 Week 6
 ~~~~~~~
 

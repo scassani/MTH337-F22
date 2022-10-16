@@ -25,7 +25,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Week 6: Oct 3 - Oct 7" href="Schedule/week6.html" />
+    <link rel="prev" title="Week 7: Oct 10 - Oct 14" href="Schedule/week7.html" />
   
    
 
@@ -37,7 +37,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="Schedule/week6.html" title="Week 6: Oct 3 - Oct 7"
+          <a href="Schedule/week7.html" title="Week 7: Oct 10 - Oct 14"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 
@@ -56,6 +56,7 @@
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">Answers to Weekly Summary questions</a><ul>
+<li><a class="reference internal" href="#week-7">Week 7</a></li>
 <li><a class="reference internal" href="#week-6">Week 6</a></li>
 <li><a class="reference internal" href="#week-5">Week 5</a></li>
 <li><a class="reference internal" href="#week-4">Week 4</a></li>
@@ -69,11 +70,9 @@
     </div>
   </div>
 </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="Schedule/week6.html"
-                          title="previous chapter">Week 6: Oct 3 - Oct 7</a></p>
-  </div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Schedule/week7.html"
+                        title="previous chapter">Week 7: Oct 10 - Oct 14</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -111,6 +110,92 @@
             
   <section id="answers-to-weekly-summary-questions">
 <h1>Answers to Weekly Summary questions<a class="headerlink" href="#answers-to-weekly-summary-questions" title="Permalink to this headline">¶</a></h1>
+<section id="week-7">
+<h2>Week 7<a class="headerlink" href="#week-7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>In this week we studied color in matplotlib, why we order the red, green and blue as [1,2,3]?</p></li>
+</ul>
+<p>We order them as [0,1,2]. I believe that is the convention that is used. I do not know specifically why red is the first one.</p>
+<ul class="simple">
+<li><p>If we feel as though we hit a wall with the extent of our coding skills, and the depth we can take this project, is that a good place to stop? I have a bunch of different plots with different vertices and some origin inclusion as well to change up the fractal patterns, and I found some interesting hypotheses, but they all seem out of reach in terms of skill level.</p></li>
+</ul>
+<p>I think it would be a good place to stop</p>
+<ul class="simple">
+<li><p>What is exactly transpose mean? Just switching rows and columns?</p></li>
+</ul>
+<p>yes</p>
+<ul class="simple">
+<li><p>Like you said in office hours will we have to do an extra credit assignment at the end of the semester to get another quiz and one project dropped?</p></li>
+</ul>
+<p>yes. (it is a survey not an extra assignment)</p>
+<ul class="simple">
+<li><p>When doing the command img.show, what does the last value mean. In class we talked about the result of the value 3, but I got a value of 4 for my image, so I was confused as to what that meant.</p></li>
+</ul>
+<p>transparency.</p>
+<ul class="simple">
+<li><p>Is the analysis part of the project up to our discretion, or just what you tell us to look at during class?</p></li>
+</ul>
+<p>In class I try to give you some ideas, but then it is up to you to develop them</p>
+<ul class="simple">
+<li><p>My img.shape had 4 dimensions instead of 3. I am assuming this is because I used a partially transparent image for the example. Do you know if there are any functions that will add/remove transparency from a certain part of the image or do these functions only work with the red, green, blue scale?</p></li>
+</ul>
+<p>You can set transparency = 1 (or 255) to get rid of it</p>
+<ul class="simple">
+<li><p>I am wondering how to whats the difference between np.linspace and np.arange?</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">np.linspace(a,b,n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">n</span></code> equispaced nodes in the interval [a,b]</p>
+<p><code class="docutils literal notranslate"><span class="pre">np.arange(a,b,c)</span></code> returns nodes (points) from teh interval [a,b) with a step of <code class="docutils literal notranslate"><span class="pre">c</span></code></p>
+<ul class="simple">
+<li><p>Will we need to use matplotlib.cm in our next project?</p></li>
+</ul>
+<p>no</p>
+<ul class="simple">
+<li><p>Why divide the color by 255?</p></li>
+</ul>
+<p>It has to do with the number of bits used. There are 8 bits, so 2^8 =  256 possible numbers</p>
+<ul class="simple">
+<li><p>Towards the end of the lecture you mentioned the index for the RGB colors switched to be at the end of the list, can you explain why that is again?</p></li>
+</ul>
+<p>the first index gives the row, the second the column and the third the RGB.</p>
+<ul class="simple">
+<li><p>What could I do if I want to append things to an array?</p></li>
+</ul>
+<p>You should not. You can use <code class="docutils literal notranslate"><span class="pre">np.append</span></code></p>
+<ul class="simple">
+<li><p>Are color maps something used frequently in real world applications? Is this something that if we plan on coding in the future we will see again, or is it something we are mostly learning to use for projects in this class?</p></li>
+</ul>
+<p>Colormaps are widely used in the real world. Every time you are displaying complex results you might wanto to choose your color map.</p>
+<ul class="simple">
+<li><p>I have a question about the reshape, is this just make a list of numbers to multiple parts? what is reshape usually used as?</p></li>
+</ul>
+<p>It changes the shape of the array. for example from 8x1 to 2x4</p>
+<ul class="simple">
+<li><p>a question i would have would be what is the difference between 8 bit and 16 bit color in pcs if they are all just stored as [255,255,255]</p></li>
+</ul>
+<p>Technically 16bit colors have way more (2^16) than 256 possible ‘shades’.</p>
+<ul class="simple">
+<li><p>Could you please give the steps to use the image on a Mac again?</p></li>
+</ul>
+<p>Download the image</p>
+<p>go to Dowload folder</p>
+<p>move image in current notebook directory</p>
+<ul class="simple">
+<li><p>Can you change the dimensions of an image on Python?</p></li>
+</ul>
+<p>Techincally yes. It is not straightforward as you might need to interpolate the image to fix the lost pixels</p>
+<p>Can we insert picture in  our project by using imshow?</p>
+<p>There is a different way to do it</p>
+<ul class="simple">
+<li><p>Will there be any extra credit opportunities?</p></li>
+</ul>
+<p>sort of, in one of the projects (5)</p>
+<ul class="simple">
+<li><p>I have question about logic to write p1 function</p></li>
+</ul>
+<p>The idea is to write a function that given a point in the polygon will follow the algorithm to</p>
+<p>Choose a vertex at random</p>
+<p>move f% of the distance between the verstx and the point to find p1</p>
+</section>
 <section id="week-6">
 <h2>Week 6<a class="headerlink" href="#week-6" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -699,7 +784,7 @@ For example <code class="docutils literal notranslate"><span class="pre">x=13</s
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="Schedule/week6.html" title="previous chapter (use the left arrow)">Week 6: Oct 3 - Oct 7</a>
+        <a class="btn btn-default" href="Schedule/week7.html" title="previous chapter (use the left arrow)">Week 7: Oct 10 - Oct 14</a>
       </div>
     
     </div>
@@ -715,7 +800,7 @@ For example <code class="docutils literal notranslate"><span class="pre">x=13</s
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="Schedule/week6.html" title="Week 6: Oct 3 - Oct 7"
+          <a href="Schedule/week7.html" title="Week 7: Oct 10 - Oct 14"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MTH337_F21  documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Answers to Weekly Summary questions</a></li> 
