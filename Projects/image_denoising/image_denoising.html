@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Image denoising &#8212; MTH337_F21  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/guzzle.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Weekly Schedule" href="../../weekly_schedule.html" />
+    <link rel="prev" title="Tartans" href="../tartans/tartans.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../weekly_schedule.html" title="Weekly Schedule"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../tartans/tartans.html" title="Tartans"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../projects.html" accesskey="U">Projects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Image denoising</a></li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">Image denoising</a><ul>
+<li><a class="reference internal" href="#image-noise">Image noise</a></li>
+<li><a class="reference internal" href="#mean-filter">Mean filter</a></li>
+<li><a class="reference internal" href="#median-filter">Median filter</a></li>
+<li><a class="reference internal" href="#edge-pixels">Edge pixels</a></li>
+<li><a class="reference internal" href="#project">Project</a></li>
+<li><a class="reference internal" href="#extra-credit">Extra credit</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../tartans/tartans.html"
+                        title="previous chapter">Tartans</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../weekly_schedule.html"
+                        title="next chapter">Weekly Schedule</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/Projects/image_denoising/image_denoising.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../../index.html">Docs</a></li>
+              
+                <li><a href="../../projects.html">Projects</a></li>
+              
+              <li>Image denoising</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <section id="image-denoising">
+<h1>Image denoising<a class="headerlink" href="#image-denoising" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">due: Sunday, Nov 6 at 11.59 PM</p>
+<section id="image-noise">
+<h2>Image noise<a class="headerlink" href="#image-noise" title="Permalink to this headline">¶</a></h2>
+<p>Image noise is a random distortion in the brightness or color in an
+image. Noise appears to some extent in every image and can be created by
+imperfections in cameras, random light fluctuations, errors occurring
+during image recording, storage and transmission etc. There are several
+different types of image noise. In this project we will be working with the
+salt and pepper noise which occurs when the color of some random pixels in
+the image is replaced by white, and the color of some other random pixels is
+replaced by black.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/image_denoising-1.png"><img alt="../../_images/image_denoising-1.png" src="../../_images/image_denoising-1.png" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-text"><em>Image with salt and pepper noise.</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>The main objective of this project is to experiment with tools that can
+be used to reduce appearance of salt and pepper noise in an image. These
+tools are the mean filter and the median filter.</p>
+<p><strong>Note.</strong> In this project we will work with black and white images.
+Color of each pixel will be described by a single number between 0 (black) and 1 (white).</p>
+</section>
+<section id="mean-filter">
+<h2>Mean filter<a class="headerlink" href="#mean-filter" title="Permalink to this headline">¶</a></h2>
+<p>The mean filter starts with an image <cite>P</cite> and produces from it a new, filtered image <cite>F</cite>
+with modified pixel colors. More precisely each pixels in position <cite>[i,j]</cite> in the filtered
+image is computed as the average of the pixels in a <cite>n</cite> <span class="math notranslate nohighlight">\(\times\)</span> <cite>n</cite> square
+of the original image <cite>P</cite> (with the <cite>[i,j]</cite> position at its center)</p>
+<p><strong>Example 1.</strong> The left side of the picture below shows a fragment of a
+photo with a 3 <span class="math notranslate nohighlight">\(\times\)</span> 3 square of pixels selected. The
+right side shows enlargement of the selected square with color value of
+each pixel. <span class="math notranslate nohighlight">\(P[i, j]\)</span> is the pixel at the center of the square.</p>
+<a class="reference internal image-reference" href="../../_images/image_denoising-2.svg"><img alt="../../_images/image_denoising-2.svg" class="align-center" src="../../_images/image_denoising-2.svg" width="650px" /></a>
+<p>The value of <span class="math notranslate nohighlight">\(F[i,j]\)</span>, the pixel of the filtered image, is given by
+the mean of the array</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+0.6 &amp; 0.7 &amp; 0.4 \\
+0.7 &amp; 0.6 &amp; 0.1 \\
+0.5 &amp; 0.5 &amp; 0.0 \\
+\end{bmatrix}\end{split}\]</div>
+<p>We can use numpy to compute this mean:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]])</span>
+
+<span class="n">sq_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">square</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sq_mean</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>0.455555555556</p>
+</div>
+<p>Thus <span class="math notranslate nohighlight">\(F[i,j]\)</span> = 0.455555555556.</p>
+</section>
+<section id="median-filter">
+<h2>Median filter<a class="headerlink" href="#median-filter" title="Permalink to this headline">¶</a></h2>
+<p>The median filter is similar to the mean filter, but instead of using
+the mean of values of pixels in a square it takes the median of these
+values.</p>
+<p><strong>Example 2.</strong> We use the same square of pixels as in Example 1. The value
+of <span class="math notranslate nohighlight">\(F[i, j]\)</span> is the median of values of the pixels in this square. Using
+numpy we obtain:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">square</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]])</span>
+
+<span class="n">sq_median</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">square</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sq_median</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>0.5</p>
+</div>
+<p>Therefore <span class="math notranslate nohighlight">\(F[i, j]\)</span> = 0.5.</p>
+<p><strong>Note.</strong> The mean filter and the median filter can be modified by using
+larger squares (5 <span class="math notranslate nohighlight">\(\times\)</span> 5, 7 <span class="math notranslate nohighlight">\(\times\)</span> 7 etc.) to
+compute mean and median. In each case the length of sides of the square
+must be an odd number, so that there is a pixel in the center of the
+square.</p>
+</section>
+<section id="edge-pixels">
+<h2>Edge pixels<a class="headerlink" href="#edge-pixels" title="Permalink to this headline">¶</a></h2>
+<p>While implementing mean and median filters we need to deal
+with the issue of pixels that are close to image edges, since for such
+pixels the square used to calculate mean or median may go outside the
+image:</p>
+<a class="reference internal image-reference" href="../../_images/image_denoising-3.svg"><img alt="../../_images/image_denoising-3.svg" class="align-center" src="../../_images/image_denoising-3.svg" width="312px" /></a>
+<p>One way to deal with this problem is to enlarge the image adding a
+border on each side of some fixed color (say, white). The width of the
+border will depend on the size of the squares used by the filter: for
+3 <span class="math notranslate nohighlight">\(\times\)</span> 3 squares it will suffice to add a border 1 pixel wide,
+for 5 <span class="math notranslate nohighlight">\(\times\)</span> 5 squares the width should be 2 pixels and so on.
+In this way a square centered at any pixel of the original image will fit
+inside the enlarged image, and we will be able to compute its mean or median.</p>
+<a class="reference internal image-reference" href="../../_images/image_denoising-4.svg"><img alt="../../_images/image_denoising-4.svg" class="align-center" src="../../_images/image_denoising-4.svg" width="312px" /></a>
+</section>
+<section id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p><strong>Part 1.</strong> Write a function <code class="docutils literal notranslate"><span class="pre">sp_noise(img,</span> <span class="pre">noise)</span></code> that adds salt
+and pepper noise to an image. Its first argument <code class="docutils literal notranslate"><span class="pre">img</span></code> should be
+a 2-dimensional numpy array representing the image and the second argument
+<code class="docutils literal notranslate"><span class="pre">noise</span></code> should be the fraction of pixels that are to be replaced by noise
+(for example, with <code class="docutils literal notranslate"><span class="pre">noise</span> <span class="pre">=</span> <span class="pre">0.05</span></code> about 5% of pixels should be noise,
+consisting in roughly equal parts of white and black pixels). The function
+should return a 2-dimensional numpy array representing the original image
+with noise added.</p>
+<p><strong>Part 2.</strong> Write a function <code class="docutils literal notranslate"><span class="pre">mean_filter(img,</span> <span class="pre">s)</span></code> that takes as its
+first argument a 2-dimensional numpy array <code class="docutils literal notranslate"><span class="pre">img</span></code> representing an image,
+and returns a numpy array obtained by applying to <code class="docutils literal notranslate"><span class="pre">img</span></code> the mean filter.
+The second argument of the function, <code class="docutils literal notranslate"><span class="pre">s</span></code> is the size of square of pixels
+used by the filter (i.e. if <code class="docutils literal notranslate"><span class="pre">s</span></code> = 3 then the filter will use
+3 <span class="math notranslate nohighlight">\(\times\)</span> 3 squares etc.).</p>
+<p><strong>Part 3.</strong> Write a function <code class="docutils literal notranslate"><span class="pre">median_filter(img,</span> <span class="pre">s)</span></code> that takes as its
+argument a numpy <code class="docutils literal notranslate"><span class="pre">img</span></code> array representing an image, and returns a
+numpy array obtained by applying to <code class="docutils literal notranslate"><span class="pre">img</span></code> the median filter. Again,
+the second argument <code class="docutils literal notranslate"><span class="pre">s</span></code> is the size of squares used by the filter.</p>
+<p><strong>Part 4.</strong> Investigate how suitable these filters are for reducing
+salt and pepper noise in images and describe your observations. Here are
+some questions you may consider:</p>
+<ul class="simple">
+<li><p>Which filter, mean or median works better for reducing noise and why?</p></li>
+<li><p>What happens as the value of <code class="docutils literal notranslate"><span class="pre">s</span></code> in these filters is increased?</p></li>
+<li><p>What happens as the level of noise in an image is increased?</p></li>
+<li><p>You can also include ideas how the process of noise reduction could be improved.</p></li>
+</ul>
+<p><strong>Part 5.</strong> The general scheme behind the mean and median filters is to take
+a small square centered at a pixel, and use some formula involving values
+of pixels in the square to compute a single number. This number is then taken
+as the new value of the pixel at the center of the square.
+Design new image filters by choosing formulas, other then mean and median,
+for these computation. Apply these filters to some photographs and describe
+what effects they produce.</p>
+<p><strong>Note.</strong> Below are links to black and white photos that you can use in
+your work. You can add salt and pepper noise to these images using the
+function <code class="docutils literal notranslate"><span class="pre">sp_noise()</span></code> defined in Part 1 of the project.</p>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../_downloads/97a0c31f2a8a371dc2b704df1a082bf5/face.png"><code class="xref download docutils literal notranslate"><span class="pre">face.png</span></code></a> (resolution: 400 <span class="math notranslate nohighlight">\(\times\)</span> 266)</p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/47a7163244a52d68c38cb8afbc30e537/boston.png"><code class="xref download docutils literal notranslate"><span class="pre">boston.png</span></code></a> (resolution: 1000 <span class="math notranslate nohighlight">\(\times\)</span> 666)</p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/45f865b91b02fb924532bfca66ed9f33/circuit.png"><code class="xref download docutils literal notranslate"><span class="pre">circuit.png</span></code></a> (resolution: 640 <span class="math notranslate nohighlight">\(\times\)</span> 426)</p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/d05505a0b9d8d3119f563b8a9a83ebb8/motorbike.png"><code class="xref download docutils literal notranslate"><span class="pre">motorbike.png</span></code></a> (resolution: 640 <span class="math notranslate nohighlight">\(\times\)</span> 552)</p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/cde6570a3e47572a103811fcdd789464/hamburg.png"><code class="xref download docutils literal notranslate"><span class="pre">hamburg.png</span></code></a> (resolution: 900 <span class="math notranslate nohighlight">\(\times\)</span> 600)</p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/a879ba154906bdac3d8ab4138bfb1f40/sign.png"><code class="xref download docutils literal notranslate"><span class="pre">sign.png</span></code></a> (resolution: 1000 <span class="math notranslate nohighlight">\(\times\)</span> 984)</p></li>
+</ul>
+</section>
+<section id="extra-credit">
+<h2>Extra credit<a class="headerlink" href="#extra-credit" title="Permalink to this headline">¶</a></h2>
+<p>Below are links to three photos taken at various places on
+campus, which were obscured by salt and pepper noise. For extra credit
+(grade increase to the next higher grade for this report: A- to A etc.) reduce
+noise in these images, find locations where the photos were taken, take photos
+showing you at the same locations, and include these photos in your report.</p>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../_downloads/42076d8eda19c88c680f9db1c074d0fe/bonusA_noise.jpg"><code class="xref download docutils literal notranslate"><span class="pre">bonusA</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/4fd6ede2c9ddc3c8f4bf2a31b424cd6d/bonusB_noise.jpg"><code class="xref download docutils literal notranslate"><span class="pre">bonusB</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/3569ab8b5130c96ced017c3117812bcc/bonusC_noise.jpg"><code class="xref download docutils literal notranslate"><span class="pre">bonusC</span></code></a></p></li>
+</ul>
+<p><strong>Note 1.</strong> To qualify for the extra credit your report must include
+both code producing images with noise removed to the extent that they are
+recognizable, and your own photos. (At for least 2 photos)</p>
+<p><strong>Note 2.</strong> In order to include your photos in the report do the following:</p>
+<ul class="simple">
+<li><p>while the cursor is in a markdown cell, press edit from the top menu</p></li>
+<li><p>select Insert Image</p></li>
+<li><p>choose the image path and select your picture</p></li>
+<li><p>When you execute this cell the photo should be displayed.</p></li>
+<li><p>Once you embed all photos in this way you can submit the notebook file.</p></li>
+</ul>
+<p>Please <strong>DO NOT</strong> drag and drop your pictures in the notebook, as it will display the picture only on your own laptop</p>
+</section>
+</section>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="../tartans/tartans.html" title="previous chapter (use the left arrow)">Tartans</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="../../weekly_schedule.html" title="next chapter (use the right arrow)">Weekly Schedule</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../weekly_schedule.html" title="Weekly Schedule"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../tartans/tartans.html" title="Tartans"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../projects.html" >Projects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Image denoising</a></li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2021, Simone Cassani. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

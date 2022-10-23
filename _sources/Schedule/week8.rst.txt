@@ -1,0 +1,31 @@
+Week 8: Oct 17 - Oct 21
+=======================
+
+Project 4
+~~~~~~~~~
+
+* :doc:`Tartan </Projects/tartan/tartan>`.
+
+
+Python
+~~~~~~
+
+* colormaps
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+NO weekly summary
+
+Week 8 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week08_in_class.html>`_
+- `Download  <../_static/week08_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+
+Sample quiz 
+~~~~~~~~~~~~~
+
+NO quiz
