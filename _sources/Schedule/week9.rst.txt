@@ -1,0 +1,34 @@
+Week 9: Oct 24 - Oct 28
+=======================
+
+Project 5
+~~~~~~~~~
+
+* :doc:`Image denoising </Projects/image_denoising/image_denoising>`.
+
+
+Python
+~~~~~~
+
+* Broadcasting
+* Indexing
+* Boolean arrays
+* color maps
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The weekly summary google form is available `**here** <https://forms.gle/UrvKKWxAQjNNkyQT8>`_ 
+
+Week 9 notebook
+~~~~~~~~~~~~~~~
+
+- `View online <../_static/week09_in_class.html>`_
+- `Download  <../_static/week09_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+
+Sample quiz 
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 9 <../Sample_Quizzes/quiz9/quiz9_sample.pdf>`
