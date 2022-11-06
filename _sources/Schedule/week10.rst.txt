@@ -1,0 +1,31 @@
+Week 10: Oct 31 - Nov 4
+=======================
+
+Project 5
+~~~~~~~~~
+
+* :doc:`Image denoising </Projects/image_denoising/image_denoising>`.
+
+
+Python
+~~~~~~
+
+* File operations
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The weekly summary google form is available `**here** <https://forms.gle/kJMsR6WSD8uggP596>`_ 
+
+Week 10 notebook
+~~~~~~~~~~~~~~~~
+
+- `View online <../_static/week10_in_class.html>`_
+- `Download  <../_static/week10_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+
+Sample quiz 
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 10 <../Sample_Quizzes/quiz10/quiz10_sample.pdf>`
