@@ -1,0 +1,103 @@
+
+Message decryption
+==================
+
+.. rubric:: (due: Sunday, Nov 13, 11:59 PM)
+
+
+Message encryption is necessary to ensure safe transmission of data.
+
+
+Messages can be encrypted by changing the order of the characters in the message.
+
+
+Consider the example: ``'What does Marcellus Wallace look like?'``
+
+The encryption is done following these steps:
+
+-  One word is chosen from an English :download:`dictionary<wordlist.txt>` containing 10000 words. This will be our **encryption key**. Lets assume the word is *pizza*
+
+-  The message is then written in a **r x c  array**, where ``c`` depends on the length of the key. In our example ``c=5``
+
+.. figure:: table1.png
+   :align: center
+
+
+
+-  The columns are the permuted based on the alphabetical order of the letters in the *key*
+
+.. figure:: table2.png
+   :align: center
+
+
+As follows:
+
+.. figure:: table3.png
+   :align: center
+
+
+- Finally the message is read by columns to obtain the encrypted message	
+
+**Encrypted message**: ``'  e aoi hoalaekeWdMlWcokaerul  ?tscslll '``
+
+Project
+-------
+
+Each file listed below contains text (a fragment of a book in English).
+
+
+Write a function **decrypt('txtfile')** that decrypts the file assigned to you and print the decrypted message and the key. The function should take as a variable the name of your .txt file.
+
+BONUS: In addition to printing the key and the message, the function creates a text file called ``last_decrypted.txt``, where ``last`` is your last name, containing the key and the message. (The file should be formatted in a clear way).
+
+The dictionary of English words (the **key** is taken from) is available here :download:`dictionary<wordlist.txt>`
+
+The function ``perm(s)`` will compute the permutation obtained from the **key**
+
+.. code:: python
+
+   def perm(s):
+      chars = sorted(enumerate(s.lower()), key = lambda t: t[1])
+      return [(t[0], s) for s, t in enumerate(chars)]
+
+For example, ``perm(“pizza”)`` returns
+
+``[(4, 0), (1, 1), (0, 2), (2, 3), (3, 4)]``
+
+
+**Note.**  This is a programming project. Your project report does not need
+include narrative, beyond comments explaining how your code works. The project will
+be graded according to the following rubrics:
+
+* Code that successfully decrypts the text file: 70%
+* Report organization( and code documentation): 30%
+
+------------
+
+-  :download:`Balk.txt<Balk.txt>`
+-  :download:`Baque.txt<Baque.txt>`
+-  :download:`Chen.txt<Chen.txt>`
+-  :download:`Corrente.txt<Corrente.txt>`
+-  :download:`Gebman.txt<Gebman.txt>`
+-  :download:`Green.txt<Green.txt>`
+-  :download:`Hastings.txt<Hastings.txt>`
+-  :download:`Huang.txt<Huang.txt>`
+-  :download:`Li.txt<Li.txt>`
+-  :download:`Liu.txt<Liu.txt>`
+-  :download:`Loughrey.txt<Loughrey.txt>`
+-  :download:`LuH.txt<LuH.txt>`
+-  :download:`LuX.txt<LuX.txt>`
+-  :download:`Nichele.txt<Nichele.txt>`
+-  :download:`Park.txt<Park.txt>`
+-  :download:`Simons.txt<Simons.txt>`
+-  :download:`Singh.txt<Singh.txt>`
+-  :download:`SmithE.txt<SmithE.txt>`
+-  :download:`SmithG.txt<SmithG.txt>`
+-  :download:`Sonin.txt<Sonin.txt>`
+-  :download:`Street.txt<Street.txt>`
+-  :download:`Tear.txt<Tear.txt>`
+-  :download:`Turner.txt<Turner.txt>`
+-  :download:`Tweedy.txt<Tweedy.txt>`
+-  :download:`Viola.txt<Viola.txt>`
+-  :download:`Zeng.txt<Zeng.txt>`
+-  :download:`Zou.txt<Zou.txt>`

@@ -11,3 +11,4 @@ Projects
 	Jump around <Projects/jump_around/jump_around>
 	Tartans <Projects/tartans/tartans>
 	Image Denoising <Projects/image_denoising/image_denoising>
+	Message decrypt <Projects/message_decrypt/message_decrypt>
