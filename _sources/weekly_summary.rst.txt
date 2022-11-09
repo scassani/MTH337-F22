@@ -1,6 +1,96 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 10
+~~~~~~~
+
+- Will you assign project during Thanksgiving? Hope not..
+
+no
+
+- Are we able to delete certain lines or texts from the text files we make? This week we studied File operations, we learned how write several things in the file. But the question that I have is how to change several things in the file which I have already wrote before? When writing to the grocery.txt document, is there a way to delete the extra 'chicken' that was added to the document when the cell was ran twice?
+
+We need to rewrite the file without the row we want to delete.
+
+- Can you demonstrate the method of filter you came up with to make the images clearer?
+
+It was a median filter that was only fixing squares with no noise.
+
+- Do you have specific times that you are available other than the set office hours?
+
+Usually Thursday and Friday afternoon
+
+- Will our next project be based around our learning of the 'open' function?
+
+no
+
+- Is there a way to drop a project grade?
+
+Yes. I can explain more in class. (Just remind me please.)
+
+- How many projects more do we have?
+
+3 more  (including project 6)
+
+- Can you only create text files or are there other types of files that you can create and write to as well?
+
+Others as well.
+
+- Is the next project code only?
+
+Project 6, yes
+
+- Do you have to explore all of the images in project, or for example doing 3 fine?
+
+2 of them is enough
+
+- I am wondering how to save plotted graph (by matplotlib) in our local file? 
+
+There is a command `plt.savefig`
+
+- do we need to use close() if we just create a empty text.
+
+Yes. you should always close a flie.
+
+- Does file operation exactly change the file in the computer?
+
+yes.
+
+- a question I would have is what is the course of action when noise distortion happens that eliminates multiple pixels all next to each other? is there a way to reasonably restore this image?
+
+when the noise is too much, you might only be bale to recover part of the image.
+
+- I was wondering how people denoise images in the real world, and if the mean and median methods are actually used.
+
+Depending on the type of noise they might be used. I am not an expert in 'real' image denoising :( 
+
+- Will we using file operation for the next project?
+
+A little
+
+- when opening a file where does it locate the new file?
+
+in the current folder.
+
+- You said we might have class Wednesday of Thanksgiving week. If we miss that day does it count as an absence? I live far away and will be leaving the day before. 
+
+We have Wednesday off. So it will not be an absence
+
+- Can the txt. file make a copy like image?
+
+You can make a copy of a file. From a quick google search it looks like the module `shutil` have sime functions that do so.
+
+- When calling a text file from a program, does the program just need to specify which directory the file is in to call it? Does this text file need to be converted into a list or numpy array in order to use it in the program? For example, if we were generating lists of prime numbers, it would be convenient to have a pre-existing list of prime numbers stored somewhere and then write a program which adds new prime numbers to this list. Although I'm not sure if the text file needs to be converted first in order for the program to read it and edit it. In the case of prime numbers, would a numpy array be more useful than a text file?
+
+It depends what you need to do with the data. Coth options might work.
+
+Storing everything in a file is convenient when you have to stop working and pick up later. When you exit python, the variables are lost, but the file is safely stored.
+
+- If we recieve an A on the project, does the extra credit have no affect?
+
+For project 5 any extra credit (above A) will carry over to project 6 or 7
+
+
 Week 9
 ~~~~~~
 
