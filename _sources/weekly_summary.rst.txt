@@ -1,6 +1,89 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 11
+~~~~~~~
+
+- How do we append a output from function instead of directly append string? 
+
+This is not clear. Do ou wan to append the output of a function to a file? First make the output s string and then you can open the fine and write into it.
+
+- What are some more complex methods of encryption that would’ve made the project insanely challenging?
+
+There are several complex encryptions. I have only worked with ones that are somewhat "easy" to decript.
+
+- Why is it so important to close your text files?
+
+You might get errors if you try to open them after. Also you waste memory.
+
+- Is there any way that I can download the Video from a website by request package? And sometimes, when I was trying to use the request package to grab the data from a website, I got an error, is there any way that I can forbid this situation?
+
+What error did you get? Look at `this link <https://www.geeksforgeeks.org/how-to-scrape-videos-using-python/>`_
+
+- What command would we use if we want to find what character is in a certain position for a text file? For example: if we want to know what letter is in the 234th position of a text file. 
+
+if it is a string ``s[234]``, For a text file you can use ``seek(234)`` and then ``read(1)`` 
+
+- do we have quiz on the Thanksgiving week?
+
+no
+
+- In this week we study several way to change the text file such as the replace and lower. Is there any way to recover the text file we have already change?
+
+Nope. if the characters are replaced with a character that is already in the message there is no way to go back.
+
+- What is your favorite type of pizza if you could only eat that specific type for the rest of your life. What is one thing you would never put on pizza that Americans tend to love on pizza?  Sorry I actually couldn't come up with any course related question this week. I guess my only question is will we have class the Wednesday before thanksgiving?
+
+There is no class on the Wednesday before Thanksgiving. My favorite pizza is tuna and grilled zucchini. Chicken and/or bbq/buffalo sauce should never touch a pizza :)
+
+- What are the most common uses of a .txt file in the work force?
+
+It a simple version of a text file. It is used for storing text.
+
+- i wonder if there is a place to see the most optimal code for decrypting things once the project is done?
+
+You cna look on the internet. They might have suggestions...
+
+- In project 6, what does "The file should be formatted in a clear way" mean?
+
+It should be formatted clearly. It shoudl be easy to read.
+
+- why bother opening a file in read mode when the same things work in write mode?
+
+that is not correct. You cannot read from a file in write mode.
+
+- There is a section of my decoded text that has underscores around it. I am assuming that these words were originally supposed to be italicized. Is there anyway to print the words with the italics or is that only possible in a markdown cell?
+
+I don't think it's possible outdise of markdown
+
+- Will we using read file and string operation in project 7?
+
+A little.
+
+- For the last two project its going to be a short pause a long one right?
+
+It's going to be long, short.
+
+- Does python treat tab space and space the same? How does it know to count \t using the find command (" ")
+
+To find the tab, you need to use ``find(\t)``
+
+- What is the purpose of the permutation in the project?
+
+Switch the columns to make the encrytion more difficult to decipher.
+
+- What other data can we get from websites using python modules? Being able to save images from websites would be useful. Being able to save a website as an HTML would also be useful. I'm curious what other kind of data can be extracted. 
+
+Videos can also be grabbed. see above for more info. In general pdf documents and such can also be grabbed.
+
+- Will we be using decryption in anymore projects?
+
+no
+
+Will we learn how to conveniently query specific data from a url request?
+
+A little.
+
 Week 10
 ~~~~~~~
 
@@ -453,6 +536,7 @@ np.log is a vectorail function, so it would be more consistent to use an array a
 - is there a built in fuction to graph in polar coordinates versus needing to convert it back to standard.
 
 `try here <https://www.pythonpool.com/matplotlib-polar-plot/>`_
+
 
 - Can we use our way to find the co-prime?
 
