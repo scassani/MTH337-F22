@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>First digits, last digits &#8212; MTH337_F21  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/guzzle.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Weekly Schedule" href="../../weekly_schedule.html" />
+    <link rel="prev" title="Message decryption" href="../message_decrypt/message_decrypt.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../weekly_schedule.html" title="Weekly Schedule"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../message_decrypt/message_decrypt.html" title="Message decryption"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../projects.html" accesskey="U">Projects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">First digits, last digits</a></li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">First digits, last digits</a><ul>
+<li><a class="reference internal" href="#project">Project</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../message_decrypt/message_decrypt.html"
+                          title="previous chapter">Message decryption</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../../weekly_schedule.html"
+                          title="next chapter">Weekly Schedule</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/Projects/first_digits_last_digits/first_digits_last_digits.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../../index.html">Docs</a></li>
+              
+                <li><a href="../../projects.html">Projects</a></li>
+              
+              <li>First digits, last digits</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <section id="first-digits-last-digits">
+<h1>First digits, last digits<a class="headerlink" href="#first-digits-last-digits" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">(due: Friday, December 2, 11:59 PM)</p>
+<p>The goal of this project is to look for some patterns (or lack of
+patterns) in data. More precisely, you will investigate how often various
+digits appear as the first digit and the last digit of numerical data of
+various kinds.</p>
+<p><strong>Exercise 1.</strong> Write a function <code class="docutils literal notranslate"><span class="pre">fd</span></code> that for a (positive or
+negative) number returns the integer which is the first non-zero digit
+of that number. If there are no non-zero digits the function should
+return 0.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fd</span><span class="p">(</span><span class="mf">123.45</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>1</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fd</span><span class="p">(</span><span class="o">-</span><span class="mi">75</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>7</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fd</span><span class="p">(</span><span class="mf">0.00345</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>3</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fd</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>0</p>
+</div>
+<p><strong>Exercise 2.</strong> Write a function <code class="docutils literal notranslate"><span class="pre">ld</span></code> that for a (positive or
+negative) number returns the integer which is the last non-zero digit of
+that number. If there are no non-zero digits the function should return
+0.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ld</span><span class="p">(</span><span class="o">-</span><span class="mf">123.45</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>5</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ld</span><span class="p">(</span><span class="mf">42000.00</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>2</p>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ld</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="output docutils container">
+<p>0</p>
+</div>
+<section id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p>1. Below are links to csv files containing numerical data coming from
+various sources. Analyze how often each non-zero digit apprears as the
+first digit of the data. You don’t need to use all files, but you should
+analyze several of them. Observe and investigate any patterns that may appear.
+Perform the same analysis for the last non-zero digits. Use bar graphs
+(or other plots) to illustrate results of your computations.</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><a class="reference download internal" download="" href="../../_downloads/82d80288a3d04c1d3fd267fda24ba301/NYSE_2016_03_25.csv"><code class="xref download docutils literal notranslate"><span class="pre">NYSE_2016_03_25.csv</span></code></a></div>
+<div class="line">This file contains information about trades of stocks listed on
+the New York Stock Exchange on March 25, 2016. Interesting data to
+analyze are stock prices (opening price, closing price, low and
+high price during the day, high and low during the preceding 52
+weeks - you can select one or more of these) and trading volumes of
+stocks. This data was obtained from the website of <a class="reference external" href="http://markets.wsj.com/usoverview">The Wall Street
+Journal</a>.</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference download internal" download="" href="../../_downloads/0f06d32b6f3a7250f190cd627087c8b5/country_areas.csv"><code class="xref download docutils literal notranslate"><span class="pre">country_areas.csv</span></code></a></div>
+<div class="line">This file lists land areas of countries in square kilometers
+and in square miles. The data was obtained from the website of <a class="reference external" href="http://data.worldbank.org/indicator/AG.LND.TOTL.K2">The
+World Bank</a>.</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference download internal" download="" href="../../_downloads/b4a10de831798724a552b936df9c7b63/country_populations.csv"><code class="xref download docutils literal notranslate"><span class="pre">country_populations.csv</span></code></a></div>
+<div class="line">This file lists populations of countries for several years. You can
+choose to analyze data for one or more years. This data was
+obtained from the website of <a class="reference external" href="http://data.worldbank.org/indicator/SP.POP.TOTL">The World
+Bank</a>.</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference download internal" download="" href="../../_downloads/124f343dfe0830d06010e85e20427f53/airports.csv"><code class="xref download docutils literal notranslate"><span class="pre">airports.csv</span></code></a></div>
+<div class="line">This file contains information about airports and heliports around
+the world. Interesting numerical data here are elevations of
+airports above the sea level. This data was obtained from the
+website <a class="reference external" href="http://ourairports.com/data/">ourairports.com</a>.</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference download internal" download="" href="../../_downloads/2b8bd4e97cb3fb5a9eebdb8bd22fd5fa/library_survey_2013.csv"><code class="xref download docutils literal notranslate"><span class="pre">library_survey_2013.csv</span></code></a></div>
+<div class="line">This file contains results of the 2013 survey of public libraries
+in the United States. There is a lot of data here. Column headings
+are explained in <a class="reference download internal" download="" href="../../_downloads/d6eb00e97397038e6c997593e5fb3f53/library_survey_2013_masthead.pdf"><code class="xref download docutils literal notranslate"><span class="pre">this</span>
+<span class="pre">file</span></code></a>. Interesting data
+to analyze includes the total number of print materials owned by
+each library (column BKVOL), the total number of annual library
+visits (column VISITS), the total annual library circulation
+(column TOTCIR), library operating expenditures (column TOTOPEXP)
+etc. Another interesting option is to extract building numbers from
+library street addresses (column ADDRESS). This data was obtained
+from the website of the <a class="reference external" href="https://data.imls.gov">Institute of Museum and Library Services</a>.</div>
+</div>
+</li>
+<li><div class="line-block">
+<div class="line"><a class="reference download internal" download="" href="../../_downloads/ed7527ff4bc062524a79e6934fe38133/capital_distances.txt"><code class="xref download docutils literal notranslate"><span class="pre">capital_distances.txt</span></code></a></div>
+<div class="line">This file lists distances (in kilometers) between capitals of
+countries. This data was obtained from the website of <a class="reference external" href="http://privatewww.essex.ac.uk/~ksg/data-5.html">prof.
+Kristian Skrede
+Gleditsch</a>.</div>
+</div>
+</li>
+</ul>
+<p>2. Below is a link to a file with text of all articles published by New York Times
+on June 1, 2010. Find all numbers appearing in the text, and  analyze frequency
+of first and last non-zero digits in these numbers. Compare this with the results
+you obtained in part 1.</p>
+<ul>
+<li><div class="line-block">
+<div class="line"><a class="reference download internal" download="" href="../../_downloads/7a14d4bc3565f1af04f4b5d90cfb6bfc/NYT_2010_06_01.txt"><code class="xref download docutils literal notranslate"><span class="pre">NYT_2010_06_01.txt</span></code></a></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="../message_decrypt/message_decrypt.html" title="previous chapter (use the left arrow)">Message decryption</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="../../weekly_schedule.html" title="next chapter (use the right arrow)">Weekly Schedule</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../weekly_schedule.html" title="Weekly Schedule"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../message_decrypt/message_decrypt.html" title="Message decryption"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../projects.html" >Projects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">First digits, last digits</a></li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2021, Simone Cassani. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>
