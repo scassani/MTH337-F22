@@ -80,7 +80,7 @@ Videos can also be grabbed. see above for more info. In general pdf documents an
 
 no
 
-Will we learn how to conveniently query specific data from a url request?
+- Will we learn how to conveniently query specific data from a url request?
 
 A little.
 
