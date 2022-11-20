@@ -56,6 +56,7 @@
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">Answers to Weekly Summary questions</a><ul>
+<li><a class="reference internal" href="#week-12">Week 12</a></li>
 <li><a class="reference internal" href="#week-11">Week 11</a></li>
 <li><a class="reference internal" href="#week-10">Week 10</a></li>
 <li><a class="reference internal" href="#week-9">Week 9</a></li>
@@ -113,6 +114,89 @@
             
   <section id="answers-to-weekly-summary-questions">
 <h1>Answers to Weekly Summary questions<a class="headerlink" href="#answers-to-weekly-summary-questions" title="Permalink to this headline">¶</a></h1>
+<section id="week-12">
+<h2>Week 12<a class="headerlink" href="#week-12" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>What are the meanings of “b” and “d” in the regular expressions?</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">\b</span></code> is a wrod delimiter (symbolize the beginning nad/or end of a word), <code class="docutils literal notranslate"><span class="pre">\dd</span></code> represtns a digit 0-9</p>
+<ul class="simple">
+<li><p>What are csv files used for?</p></li>
+</ul>
+<p>They are very good for storing data</p>
+<ul class="simple">
+<li><p>Do we have class next week? If so, what will we be doing?</p></li>
+</ul>
+<p>yes. more practice whit pandas and project 7</p>
+<ul class="simple">
+<li><p>How does the the .findall help in the cases of .htmls?</p></li>
+</ul>
+<p>html have a very regular structure that can be parsed wth regex</p>
+<ul class="simple">
+<li><p>Is there any way to edit a column of a csv file after creating it without having to delete and recreate the column?</p></li>
+</ul>
+<p>if you want to edit the whole column you cna just reset it. to edit some specific elements you need to access a row. (below there is an answer on how to do that)</p>
+<ul class="simple">
+<li><p>Will the last project be short non narrative?</p></li>
+</ul>
+<p>yes!</p>
+<ul class="simple">
+<li><p>Are we going to work with data frames on monday?</p></li>
+</ul>
+<p>yes!</p>
+<ul class="simple">
+<li><p>(not class related) What’re you’re favorite Italian Christmas treats and can we try them?</p></li>
+</ul>
+<p>Hard question… Probably “Pandoro”. There are stores selling them here.</p>
+<ul class="simple">
+<li><p>What are the differences between changing the file with the notebook and directly changing the csv? What should we do in the notebook if we want to save the changes in the file?</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">to_csv</span></code> converts the dataframe to csv file.</p>
+<ul class="simple">
+<li><p>How does re know that abc is a or b or c instead of just it appearing in that order?</p></li>
+</ul>
+<p>That is how reg. expression work</p>
+<ul class="simple">
+<li><p>What is the ‘low_memory=False’ when reading a csv file?</p></li>
+</ul>
+<p>it tells python to read the file all at once (even if it is very big and needs a lot of memory)</p>
+<ul class="simple">
+<li><p>When using the “pandas” function in python, is there a way to edit a specific cell in the tables we were working with?</p></li>
+</ul>
+<p>yes. you can use <code class="docutils literal notranslate"><span class="pre">df.loc</span></code> or <code class="docutils literal notranslate"><span class="pre">df.iloc</span></code> to selct a row.</p>
+<ul class="simple">
+<li><p>After we read the csv file, can we create a new column by multiplying one column with another column in the csv file?</p></li>
+</ul>
+<p>yes. <code class="docutils literal notranslate"><span class="pre">df[&quot;new&quot;]=df[&quot;col1&quot;]*df[&quot;col2&quot;]</span></code></p>
+<ul class="simple">
+<li><p>Should we have one function work to open all files and extract all numbers? Or will it vary per file?</p></li>
+</ul>
+<p>It will vary from file to file</p>
+<ul class="simple">
+<li><p>In the same way that numpy borrows C to run math operations faster. Is there a way to borrow from peral to have more complex regular expressions</p></li>
+</ul>
+<p>I believe that you can do very complex regex in python as well. I do not know if it is possible to import something from peral</p>
+<ul class="simple">
+<li><p>What does the * mean in the re import</p></li>
+</ul>
+<p>do you mean in the findall? in <code class="docutils literal notranslate"><span class="pre">re.findall</span></code> it means that we want to match the precedding expression zero or more times.</p>
+<ul class="simple">
+<li><p>Can a page’s html be requested?</p></li>
+</ul>
+<p>request.get(…).text will return the html of a page. I am not very familar with it, but I know there is a module called beautiful soup that is really good to parse html files.</p>
+<ul class="simple">
+<li><p>Are lists just a special case of dictionaries? If you had a dictionary like {a : 0, b : 1, c : 2} this would seem to correspond to the list [a,b,c]. What other data types are just special dictionaries? In Set Theory, functions from A to B are defined as subsets of A x B. You could potentially define functions in Python as dictionaries {a_1 : b_1 , a_2 : b_2 …} instead of as procedures. Is there any utility in making this definition or is it much more practical to think of functions as procedures.</p></li>
+</ul>
+<p>List and dictionaries have similarities but are not the same. .json files are basically dictionaries. It depends how you wan tot use discionraie to ‘define’ functions. I believe the classical definition of functions is more natural</p>
+<ul class="simple">
+<li><p>will there be any extra credit to improve our grade?</p></li>
+</ul>
+<p>As i explained last week there will be an opportunity to gain a drop of the lowest grade in the project category.</p>
+<ul class="simple">
+<li><p>I am wondering how to use “apply” function to a dataframe?</p></li>
+</ul>
+<p>just do <code class="docutils literal notranslate"><span class="pre">df[&quot;col_name&quot;].apply(f)</span></code>. it will apply the function to all the elements in the column.</p>
+</section>
 <section id="week-11">
 <h2>Week 11<a class="headerlink" href="#week-11" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
