@@ -23,8 +23,8 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Tartans" href="../tartans/tartans.html" />
@@ -57,12 +57,16 @@
       </div>
   <div id="left-column">
     <div class="sphinxsidebar">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="../pythagorean_triples/pythagorean_triples.html"
-                        title="previous chapter">Pythagorean triples</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../tartans/tartans.html"
-                        title="next chapter">Tartans</a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../pythagorean_triples/pythagorean_triples.html"
+                          title="previous chapter">Pythagorean triples</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../tartans/tartans.html"
+                          title="next chapter">Tartans</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -310,11 +314,12 @@ div.nboutput.container div.output_area > div[class^='highlight']{
 }
 
 /* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
-.prompt a.copybtn {
+.prompt .copybtn {
     display: none;
 }
 
 /* Some additional styling taken form the Jupyter notebook CSS */
+.jp-RenderedHTMLCommon table,
 div.rendered_html table {
   border: none;
   border-collapse: collapse;
@@ -323,10 +328,14 @@ div.rendered_html table {
   font-size: 12px;
   table-layout: fixed;
 }
+.jp-RenderedHTMLCommon thead,
 div.rendered_html thead {
   border-bottom: 1px solid black;
   vertical-align: bottom;
 }
+.jp-RenderedHTMLCommon tr,
+.jp-RenderedHTMLCommon th,
+.jp-RenderedHTMLCommon td,
 div.rendered_html tr,
 div.rendered_html th,
 div.rendered_html td {
@@ -338,12 +347,15 @@ div.rendered_html td {
   max-width: none;
   border: none;
 }
+.jp-RenderedHTMLCommon th,
 div.rendered_html th {
   font-weight: bold;
 }
+.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
 div.rendered_html tbody tr:nth-child(odd) {
   background: #f5f5f5;
 }
+.jp-RenderedHTMLCommon tbody tr:hover,
 div.rendered_html tbody tr:hover {
   background: rgba(66, 165, 245, 0.2);
 }
@@ -362,9 +374,9 @@ div.rendered_html tbody tr:hover {
 <li><p>Sketch all of the points obtained, except the first <span class="math notranslate nohighlight">\(m\)</span> (where <span class="math notranslate nohighlight">\(m\)</span> is a <em>small</em> number)</p></li>
 </ol>
 <p><strong>Ex.1</strong> Write a Python function <code class="docutils literal notranslate"><span class="pre">vertices(n)</span></code>. The function should return the vertices of a regular cyclic polygon with <code class="docutils literal notranslate"><span class="pre">n</span></code> sides (inscribed in a circle with radius 1)</p>
-<img alt="figure_1" src="../../_images/img1.png" />
+<p><img alt="figure_1" src="../../_images/img1.png" /></p>
 <p><strong>Ex.2</strong> Write a Python function <code class="docutils literal notranslate"><span class="pre">pick_p0</span></code> that selects the initial point <span class="math notranslate nohighlight">\(\mathbf{p}_0\)</span> for the algorithm</p>
-<img alt="figure_2" src="../../_images/img2.png" />
+<p><img alt="figure_2" src="../../_images/img2.png" /></p>
 <p><strong>Note</strong>: The python module <code class="docutils literal notranslate"><span class="pre">matplotlib.path</span></code> can be used to check if a point is contained inside of a polygon as follows:</p>
 <p>consider</p>
 <ul class="simple">
@@ -378,8 +390,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">matplotlib.path</span> <span class="k">as</span> <span class="nn">mplPath</span> <span class="c1"># import module with alias</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.path</span> <span class="k">as</span> <span class="nn">mplPath</span> <span class="c1"># import module with alias</span>
 
 <span class="n">v</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)]</span> <span class="c1"># vertexes of a square</span>
 <span class="n">P</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span> <span class="c1"># point inside the square</span>
@@ -389,14 +400,13 @@ div.rendered_html tbody tr:hover {
 </pre></div>
 </div>
 </div>
-<img alt="figure_3" src="../../_images/img3.png" />
+<p><img alt="figure_3" src="../../_images/img3.png" /></p>
 <p>The function <code class="docutils literal notranslate"><span class="pre">contains_point(</span> <span class="pre">(x,y)</span> <span class="pre">)</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the point is contained in the path <code class="docutils literal notranslate"><span class="pre">poly_path</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">poly_path</span><span class="o">.</span><span class="n">contains_point</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poly_path</span><span class="o">.</span><span class="n">contains_point</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -413,8 +423,7 @@ True
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">poly_path</span><span class="o">.</span><span class="n">contains_point</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poly_path</span><span class="o">.</span><span class="n">contains_point</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -428,12 +437,12 @@ False
 </pre></div></div>
 </div>
 <p><strong>Ex.3</strong> Write a Python function <code class="docutils literal notranslate"><span class="pre">pick_p1</span></code> that given <span class="math notranslate nohighlight">\(\mathbf{p}_0\)</span> will find the next point, <span class="math notranslate nohighlight">\(\mathbf{p}_1\)</span>, in the algorithm</p>
-<img alt="figure_4" src="../../_images/img4.png" />
+<p><img alt="figure_4" src="../../_images/img4.png" /></p>
 <p><strong>Project:</strong></p>
 <p>Explore, describe and analyze the results produced by the algorithm for different regular polygons (<span class="math notranslate nohighlight">\(n\geq 3\)</span>), different values of <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <p><strong>Note/Suggestion</strong>: Some choices for the value of <span class="math notranslate nohighlight">\(n\)</span> might give more “interesting” results than other values. If the result obtained does not look very “interesting” it might be of value to add some constrain on the way the vertex <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> is chosen.</p>
 <p>Here is an example with 20 points for the regular triangle (<span class="math notranslate nohighlight">\(n=3\)</span>)</p>
-<img alt="figure_5" src="../../_images/img5.png" />
+<p><img alt="figure_5" src="../../_images/img5.png" /></p>
 </section>
 
 
