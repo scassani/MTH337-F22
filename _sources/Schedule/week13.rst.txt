@@ -1,0 +1,32 @@
+Week 13: Nov 21 - Nov 22
+========================
+
+Project 7
+~~~~~~~~~
+
+* :doc:`1st digits, last digits </Projects/first_digits_last_digits/first_digits_last_digits>`.
+
+
+Python
+~~~~~~
+
+* Pandas and dataframes
+* Bar plots
+
+
+Reminder: Weekly Summary
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+NO WS
+
+Week 13 notebook
+~~~~~~~~~~~~~~~~
+
+- `View online <../_static/week13_in_class.html>`_
+- `Download  <../_static/week13_in_class.ipynb>`_ (Right click on the link and choose 'save link as...'. After downloading put it in the directory where you keep your Jupyter notebooks).
+
+
+Sample quiz 
+~~~~~~~~~~~~~
+
+- :download:`Sample Quiz 12 <../Sample_Quizzes/quiz12/quiz12_sample.pdf>`
