@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Simple Sudoku &#8212; MTH337_F21  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/guzzle.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Weekly Schedule" href="../../weekly_schedule.html" />
+    <link rel="prev" title="First digits, last digits" href="../first_digits_last_digits/first_digits_last_digits.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../weekly_schedule.html" title="Weekly Schedule"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../first_digits_last_digits/first_digits_last_digits.html" title="First digits, last digits"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../projects.html" accesskey="U">Projects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Simple Sudoku</a></li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Contents</h2>
+    <div class="sidebar-localtoc">
+      <ul>
+<li><a class="reference internal" href="#">Simple Sudoku</a><ul>
+<li><a class="reference internal" href="#project">Project</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../first_digits_last_digits/first_digits_last_digits.html"
+                        title="previous chapter">First digits, last digits</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../weekly_schedule.html"
+                        title="next chapter">Weekly Schedule</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/Projects/simple_sudoku/simple_sudoku.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../../index.html">Docs</a></li>
+              
+                <li><a href="../../projects.html">Projects</a></li>
+              
+              <li>Simple Sudoku</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <section id="simple-sudoku">
+<h1>Simple Sudoku<a class="headerlink" href="#simple-sudoku" title="Permalink to this headline">¶</a></h1>
+<p class="rubric">(due: Sunday, Dec 11, 11:59 PM)</p>
+<p>A <strong>sudoku</strong> is a puzzle consisting of a 9x9 grid of numbers <a class="reference external" href="https://en.wikipedia.org/wiki/Sudoku">Sudoku Wiki</a>.</p>
+<p>The objective of the puzzle is to fill in the missing cells with numbers from 1-9 such that:</p>
+<ul class="simple">
+<li><p>Each row contains no repeated numbers</p></li>
+<li><p>Each column contains no repeated numbers</p></li>
+<li><p>Each of the nine 3x3 subgrids (called also boxes) contains no repeated numbers</p></li>
+</ul>
+<p>We will be working with sudokus of the <strong>Easy</strong> cathegory (that requires <strong>no recursion</strong>)</p>
+<p><strong>NOTE:</strong> this problem has been solved online using python. A project that is found plagiarizing code will lead to an automatic failing grade for the whole class, and the student will be reported to the Office of Academic Integrity for cheating.</p>
+<p><strong>Ex 1.</strong></p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">check_row(s,i)</span></code> that given a sudoku puzzle <code class="docutils literal notranslate"><span class="pre">s</span></code> and the row index <code class="docutils literal notranslate"><span class="pre">i</span></code> will return the numbers that could fit in the row</p>
+<p><strong>Ex. 2</strong></p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">check_col(s,j)</span></code> that given a sudoku puzzle <code class="docutils literal notranslate"><span class="pre">s</span></code> and the column index <code class="docutils literal notranslate"><span class="pre">j</span></code> will return the numbers that could fit in the column</p>
+<p><strong>Ex. 3</strong></p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">check_box(s,i,j)</span></code> that given a sudoku puzzle <code class="docutils literal notranslate"><span class="pre">s</span></code> and the row and column indexes <code class="docutils literal notranslate"><span class="pre">i,j</span></code> will return the numbers that could fit in 3x3 box</p>
+<section id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this headline">¶</a></h2>
+<p>Write a function that solve a <strong>simple sodoku</strong>. Some examples of the starting grid of a simple sudoku, that you are trying to solve for this project, are given in this file: <a class="reference download internal" download="" href="../../_downloads/901e92afbe26b26389235823a5a17ec2/sudokus.txt"><code class="xref download docutils literal notranslate"><span class="pre">sudokus.txt</span></code></a></p>
+<p>The following function can be used to print the sudoku</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_sudoku</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span> <span class="c1"># arr is a 9x9 numpy array</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;.&quot;</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\u2551</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\u2550</span><span class="s2">&quot;</span><span class="o">*</span><span class="mi">9</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u256C</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u2550</span><span class="s2">&quot;</span><span class="o">*</span><span class="mi">9</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u256C</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\u2550</span><span class="s2">&quot;</span><span class="o">*</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Note.</strong>  This is a programming project. Your project report does not need
+include narrative, beyond comments explaining how your code works. The project will
+be graded according to the following rubrics:</p>
+<ul class="simple">
+<li><p>Code that successfully solves the simple sodoku: 70%</p></li>
+<li><p>Report organization and code documentation: 30%</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="../first_digits_last_digits/first_digits_last_digits.html" title="previous chapter (use the left arrow)">First digits, last digits</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="../../weekly_schedule.html" title="next chapter (use the right arrow)">Weekly Schedule</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../weekly_schedule.html" title="Weekly Schedule"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../first_digits_last_digits/first_digits_last_digits.html" title="First digits, last digits"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MTH337_F21  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../projects.html" >Projects</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Simple Sudoku</a></li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2021, Simone Cassani. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

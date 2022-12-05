@@ -1,6 +1,89 @@
 Answers to Weekly Summary questions
 ===================================
 
+Week 14
+~~~~~~~
+
+- Can I convert a list to dataframe?
+
+Look at `this link <https://favtutor.com/blogs/list-to-dataframe-python>`_
+
+- Will there be office hours during our last week of classes?
+
+Yes, I will be available on Wenesday for 1 hour only, 2:30 - 3:30 and on Thursday, Friday on Discord.
+
+- Do we have a quiz this coming Monday?
+
+no
+
+- What other games related to sudoko and bingo can we create on python?
+
+Plenty, cross-word like games for example.
+
+- Can we please play that game again on Monday, I really want to win.
+
+We can maybe play one more game.
+
+- When will the last project be due?
+
+Sunday, Dec 11
+
+- What is your favorite project from this semester? Is there a different one that you wish we got to?
+
+Tartans ( by far my favorite). I am pretty happy with the project we got to do this semester.
+
+- What will we be doing in class next week?
+
+Working to project 8
+
+- If we enter a wrong value into the input but not change the loop, is it good to ignore it and continue entering the input?
+
+yes
+
+- Will we be working on the last project in class next week?
+
+yes
+
+- an you explain again why it is important to be "greedy" at certain times when using the .findall in re?
+
+It depends what you are looking for. Say that you want to find numbers, you can look for something like r"\d+\.{,1}\d*". In this case being greedy is good, because you wan tot find the longest set of consecutive digits (So you want to be greedy)
+
+- Except the project8, are we going to study new knowledge in the last week?
+
+Maybe on Wednesday, depending on how far along on project 8 you are.
+
+- Is there a reason why the last project will only be for a simple sudoku? 
+
+Doing a complicated sudoku requires recursion (which is more complicated to deal with)
+
+- Is np.random.choice better than random.randint?
+
+choice is more generic.
+
+- It the last project need the text? or it is just a short project?
+
+short project
+
+- What does "r" do in findall? Such as re.findall(r'\d+', abc)
+
+it makes it a raw string
+
+- What's the regular expression of finding out all the numbers not ending with zero?
+
+For integers it could be r"\d*[1-9]"
+
+- Will we have time in class to do project 8?
+
+yes
+
+- Since we were working with sets this week, how much of axiomatic Zermelo-Fraenkel  set theory can be done in Python? I'm guessing the mathematics we can do is limited to constructive mathematics (i.e. Law of Excluded Middle [P or ~P] does not hold in general, and Existential statements have to be justified with procedures that actually exhibit the object which is posited to exist), and so I would think that most versions of the Axiom of Choice don't have an analogue in Python. Although some versions, such as the Axiom of Countable Choice or the Axiom of Dependent Choice are occasionally used.
+
+I hope this can  partially answer your question `link <https://tirthajyoti.github.io/Notebooks/Set_Algebra_with_Python.html>`_
+
+- Can we get some resource for "re" ?
+
+`here <https://docs.python.org/3/howto/regex.html>`_
+
 Week 12
 ~~~~~~~
 

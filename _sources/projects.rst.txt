@@ -13,3 +13,4 @@ Projects
 	Image Denoising <Projects/image_denoising/image_denoising>
 	Message decrypt <Projects/message_decrypt/message_decrypt>
 	1st digit, last digit <Projects/first_digits_last_digits/first_digits_last_digits>
+	Simple Sudoku <Projects/simple_sudoku/simple_sudoku>
